@@ -32,12 +32,13 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - **Conservative figures.** GCP: CHF 800k+ *soft commitments*, registration Q1 2027 (not "raised CHF 1M"). Matura 2021 to 2024.
 - **No private data on the public site:** no home address, phone number or date of birth.
 - **No CV download.** The site is the CV; Arthur tailors PDF versions per application. Don't add `cv.pdf` or download buttons.
+- **Exchange school not confirmed.** Never write its name in the HTML; the Education card shows a blurred placeholder ("Partner University", `.redacted`). Contact text says "exchange semester abroad".
 - **4 languages** stat stays (Swiss German counted separately).
 - SYZ papers: one co-authored with the Chief Economist (Swiss-US tariffs), one with the CIO (SCO). Not "both with CIO and Chief Economist".
 - Distinctions (from Arthur's LinkedIn): SNG Special Distinction 2025 (Translémanique en Solitaire performance), SNG Sports Merit Awards 2025, 2023, 2022, Human Rights Watch nomination 2024 (Matura paper). No J/70 league bronze results.
 - Experience copy is short prose with bold lead-ins; only restate facts Arthur supplied, never invent outcomes.
 - GCP page = role (split, KPIs, capital stack, "My role" bullets) + concept blocks (problem, approach, working locally, structure) + ambition line. Keep the two halves non-overlapping.
-- **Performance:** no `backdrop-filter` (caused scroll lag), no `text-wrap: pretty` on body text. Cards use `thumb-*.jpg` (900px); every `<img>` has `decoding="async"`, below-the-fold ones `loading="lazy"` with width/height.
+- **Performance:** no `backdrop-filter` (caused scroll lag), no `text-wrap: pretty` on body text, reveal is fade-only, count-up blocks use `contain: layout`, no animated box-shadows, gallery photos ≤800px wide. Cards use `thumb-*.jpg` (900px); every `<img>` has `decoding="async"`, below-the-fold ones `loading="lazy"` with width/height.
 - Restrained interactivity: scroll reveal, count-up numbers, active nav, progress bar, card hover. No skill bars, no typing effects.
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 

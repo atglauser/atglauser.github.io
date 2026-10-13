@@ -17,7 +17,7 @@ a{color:inherit}
 img{max-width:100%;display:block}
 h1,h2,h3{text-wrap:balance}
 /* Justified body copy; hyphenation keeps word gaps even, especially in narrow columns */
-.lede,.bullets li,.c-block p,.xp-sum,.contact p,.hero .sub,.cell li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.lede,.bullets li,.c-block p,.xp-sum,.contact p,.hero .sub{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:16px;top:-60px;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:11;text-decoration:none}
 .skip:focus{top:12px}
@@ -78,8 +78,9 @@ h1,h2,h3{text-wrap:balance}
 .xp{padding:120px 16px}
 .xp h2{font-size:clamp(44px,7vw,88px);line-height:1;letter-spacing:-.045em;font-weight:700;margin-bottom:48px}
 .xp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
-.xp-card{position:relative;display:flex;flex-direction:column;overflow:hidden;text-decoration:none;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:var(--r);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
-.xp-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(20,21,22,.45)}
+.xp-card{position:relative;display:flex;flex-direction:column;overflow:hidden;text-decoration:none;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:var(--r);transition:transform .3s var(--ease)}
+.xp-card:hover{transform:translateY(-4px)}
+.xp-card.theme-dcm::before{display:none}
 .xp-card:active{transform:translateY(-1px)}
 .xp-card.span3{grid-column:span 3}
 .xp-card.span2{grid-column:span 2}
@@ -284,8 +285,13 @@ h1,h2,h3{text-wrap:balance}
 .contact.compact .foot{margin-top:56px}
 
 /* Reveal */
-.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.js .reveal.in{opacity:1;transform:none}
+/* Fade only: sliding many blocks at once while scrolling caused jank */
+.js .reveal{opacity:0;transition:opacity .5s var(--ease)}
+.js .reveal.in{opacity:1}
+/* Count-up numbers rewrite text every frame; keep that re-layout local */
+.stat,.kpi,.figure,.beric-fig .big,.xp-fig{contain:layout}
+/* Unconfirmed exchange school: placeholder text only, blurred */
+.redacted{filter:blur(7px);user-select:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
