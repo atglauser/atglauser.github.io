@@ -50,7 +50,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 ## Notes
 - No certification credential IDs on the site (Arthur's decision).
 - DataCamp: only Python Data Fundamentals and SQL Fundamentals are completed (Associate Data Scientist was never done; don't list it).
-- Open question: Sailing is dated "2023 to present" but awards and Winter Series start in 2022.
+- Sailing is dated "2016 to present" (Arthur's decision).
 
 ## Collaboration style
 Arthur prefers concise, direct answers (bullet points where they fit), targeted edits over broad rewrites, and wants strategic concerns flagged before execution.
