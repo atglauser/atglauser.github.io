@@ -177,27 +177,45 @@ h1,h2,h3{text-wrap:balance}
 .paper .go{margin-top:auto;padding-top:12px;font-size:14px;font-weight:600}
 .cols2{grid-template-columns:1fr 1fr;column-gap:56px}
 
-/* GCP: Swiss print. Sharp grid, oversized figure, alpine green */
-.theme-gcp{--bg:#eef0eb;--fg:#15201a;--muted:#536058;--accent:#2b6649;--card:#f7f8f5;--line:#cdd5cd;--r:0px;--ph:linear-gradient(170deg,#c9d6cc,#2b6649);--ph-fg:rgba(255,255,255,.5)}
-.theme-gcp h1,.theme-gcp h2{font-weight:800;letter-spacing:-.045em}
+/* GCP: hard monochrome. Black on bone, heavy uppercase, thick rules, cut corners and a slanted black band */
+.theme-gcp{--bg:#efefed;--fg:#0d0d0d;--muted:#4b4b4b;--accent:#0d0d0d;--card:#ffffff;--line:#0d0d0d;--r:0px;--ph:#1b1b1b;--ph-fg:#3a3a3a;
+  --cut:polygon(0 0,100% 0,100% calc(100% - 56px),calc(100% - 56px) 100%,0 100%)}
+.theme-gcp h1,.theme-gcp h2{font-weight:800;letter-spacing:-.045em;text-transform:uppercase;line-height:.9}
+.theme-gcp h1{font-size:clamp(44px,6.2vw,82px)}
+.theme-gcp .meta b{text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+.theme-gcp .back,.theme-gcp .subhead{text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;color:var(--fg)}
+.theme-gcp .lede{font-weight:500}
+.theme-gcp .media{clip-path:var(--cut)}
+.theme-gcp .media img,.gcp-band .media img{filter:grayscale(1) contrast(1.12)}
+.theme-gcp .bullets li::before{top:.55em;width:9px;height:9px;background:var(--fg);transform:skewX(-20deg)}
+.theme-gcp .tag{border:1.5px solid var(--fg);color:var(--fg);text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:700}
 .gcp-mark{display:block;width:72px;height:auto;margin-bottom:24px}
-.figure{border-top:3px solid var(--fg);padding-top:16px;margin-bottom:24px}
-.figure .big{font-size:clamp(56px,9vw,112px);font-weight:800;letter-spacing:-.05em;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums}
-.figure .lbl{font-size:14px;color:var(--muted);margin-top:10px}
-.theme-gcp .kpis{grid-template-columns:1fr 1fr}
-.stack{margin-bottom:40px}
-.stack .bar{display:flex;height:48px;font-size:13px;font-weight:600}
-.stack .debt{flex:0 0 70%;background:#c4d3c9;color:var(--fg);display:flex;align-items:center;padding-left:12px}
-.stack .eq{flex:1;background:var(--accent);color:#f7f8f5;display:flex;align-items:center;padding-left:12px}
-.flow{margin-top:12px;font-size:13px;color:var(--muted)}
-.gcp-more{margin-top:96px;padding-top:56px;border-top:3px solid var(--fg)}
-.concept{display:grid;grid-template-columns:1fr 1fr;gap:44px 64px}
-.chapter .c-title{font-family:var(--sans);font-size:20px;line-height:1.3;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
-.c-block p{font-size:15.5px;max-width:62ch}
-.ambition{font-size:clamp(20px,2.4vw,28px);font-weight:600;letter-spacing:-.02em;line-height:1.35;max-width:40ch;margin:64px 0;color:var(--accent)}
+.figure{border-top:8px solid var(--fg);padding-top:18px;margin-bottom:24px}
+.figure .big{font-size:clamp(60px,9.5vw,120px);font-weight:800;letter-spacing:-.055em;line-height:.88;color:var(--accent);font-variant-numeric:tabular-nums}
+.figure .lbl{font-size:13px;color:var(--muted);margin-top:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.theme-gcp .kpis{grid-template-columns:1fr 1fr;gap:2px;background:var(--fg);border:2px solid var(--fg)}
+.theme-gcp .kpi{background:var(--card)}
+.theme-gcp .kpi .num{font-weight:800}
+.stack{margin-bottom:44px}
+.stack .bar{display:flex;height:52px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border:2px solid var(--fg)}
+.stack .debt{flex:0 0 70%;background:repeating-linear-gradient(135deg,#ffffff 0 9px,#d9d9d6 9px 11px);color:var(--fg);display:flex;align-items:center;padding-left:14px}
+.stack .eq{flex:1;background:var(--fg);color:#ffffff;display:flex;align-items:center;padding-left:14px;clip-path:polygon(14px 0,100% 0,100% 100%,0 100%);margin-left:-14px;padding-left:24px}
+.flow{margin-top:12px;font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+
+/* GCP concept band: black, slanted top edge */
+.gcp-band{background:#0d0d0d;color:#f2f2f0;padding:calc(120px + 6vw) 16px 120px;clip-path:polygon(0 6vw,100% 0,100% 100%,0 100%);margin-top:-6vw;position:relative}
+.gcp-band .concept{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.gcp-band .c-block{border-top:3px solid #f2f2f0;padding-top:20px}
+.gcp-band .c-title{font-size:clamp(22px,2.2vw,28px);line-height:1;font-weight:800;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:14px}
+.gcp-band .c-block p{font-size:15.5px;color:#c9c9c6;max-width:62ch}
+.ambition{font-size:clamp(22px,2.6vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1.1;text-transform:uppercase;max-width:34ch;margin:88px 0 64px}
 .gcp-visuals{display:grid;grid-template-columns:1.7fr 1fr;grid-auto-rows:clamp(280px,32vw,440px);gap:12px}
-.gcp-visuals .plan{background:#ffffff}
+.gcp-visuals .media{clip-path:polygon(0 0,100% 0,100% calc(100% - 48px),calc(100% - 48px) 100%,0 100%);background:#1b1b1b}
+.gcp-visuals .plan{background:#ffffff;clip-path:polygon(48px 0,100% 0,100% 100%,0 100%,0 48px)}
 .gcp-visuals .plan img{object-fit:contain;padding:16px}
+.xp-card.theme-gcp h3{text-transform:uppercase;font-weight:800;letter-spacing:-.035em}
+.xp-card.theme-gcp .xp-media img{filter:grayscale(1) contrast(1.12)}
+.xp-card.theme-gcp{border:2px solid #0d0d0d}
 
 /* Beric: terracotta and slate. Figure-led column, project renderings */
 .theme-beric{--bg:#e6e4e1;--fg:#1f2326;--muted:#596066;--accent:#a4532a;--card:#f1efec;--line:#cfcbc5;--r:4px;--ph:linear-gradient(160deg,#cdbcad,#a4532a);--ph-fg:rgba(255,255,255,.55)}
@@ -323,7 +341,10 @@ h1,h2,h3{text-wrap:balance}
   .gcp-visuals{grid-auto-rows:auto}
   .gcp-visuals .media{aspect-ratio:16/9}
   .gcp-visuals .plan{aspect-ratio:4/5}
-  .gcp-more{margin-top:64px;padding-top:40px}
+  .gcp-band{padding:calc(88px + 8vw) 16px 88px;clip-path:polygon(0 8vw,100% 0,100% 100%,0 100%);margin-top:-8vw}
+  .gcp-band .concept{grid-template-columns:1fr;gap:40px}
+  .ambition{margin:64px 0 48px}
+  .theme-gcp{--cut:polygon(0 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%)}
   .proj-grid .media,.proj-grid .media:nth-child(2),.proj-grid .media:nth-child(3){aspect-ratio:3/2;grid-column:auto;grid-row:auto}
   .beric-projects{margin-top:64px}
   .bento{grid-template-columns:1fr}
