@@ -161,9 +161,14 @@ p,li{text-wrap:pretty}
 .stack .debt{flex:0 0 70%;background:#c4d3c9;color:var(--fg);display:flex;align-items:center;padding-left:12px}
 .stack .eq{flex:1;background:var(--accent);color:#f7f8f5;display:flex;align-items:center;padding-left:12px}
 .flow{margin-top:12px;font-size:13px;color:var(--muted)}
-.module{display:flex;align-items:flex-end;gap:16px;margin-bottom:40px}
-.module img{width:120px;height:auto;border:1px solid var(--line)}
-.module figcaption{font-size:13px;color:var(--muted)}
+.gcp-more{margin-top:96px;padding-top:56px;border-top:3px solid var(--fg)}
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:44px 64px}
+.c-block h3{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
+.c-block p{font-size:15.5px;max-width:62ch}
+.ambition{font-size:clamp(20px,2.4vw,28px);font-weight:600;letter-spacing:-.02em;line-height:1.35;max-width:40ch;margin:64px 0;color:var(--accent)}
+.gcp-visuals{display:grid;grid-template-columns:1.7fr 1fr;grid-auto-rows:clamp(280px,32vw,440px);gap:12px}
+.gcp-visuals .plan{background:#ffffff}
+.gcp-visuals .plan img{object-fit:contain;padding:16px}
 
 /* Beric: terracotta and slate. Figure-led column */
 .theme-beric{--bg:#e6e4e1;--fg:#1f2326;--muted:#596066;--accent:#a4532a;--card:#f1efec;--line:#cfcbc5;--r:4px;--ph:linear-gradient(160deg,#cdbcad,#a4532a);--ph-fg:rgba(255,255,255,.55)}
@@ -261,6 +266,11 @@ p,li{text-wrap:pretty}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px;margin-top:48px;grid-template-areas:"a a" "b d" "b d" "c f" "e e"}
+  .concept,.gcp-visuals{grid-template-columns:1fr}
+  .gcp-visuals{grid-auto-rows:auto}
+  .gcp-visuals .media{aspect-ratio:16/9}
+  .gcp-visuals .plan{aspect-ratio:4/5}
+  .gcp-more{margin-top:64px;padding-top:40px}
   .bento{grid-template-columns:1fr}
   .cell.wide{grid-column:auto}
   .cell,.skill-cell{padding:24px}
@@ -356,7 +366,7 @@ p,li{text-wrap:pretty}
     <div>
       <h2 class="reveal">DCM Systematic</h2>
       <p class="meta reveal"><b>[ Summer Analyst ]</b> Geneva, Aug to Sep 2026</p>
-      <p class="lede reveal">Inside a multi-strategy systematic fund: turning fund data, reporting and investor pipelines into automated, reconciled workflows in Python.</p>
+      <p class="lede reveal">Two months on the operations side of a Geneva multi-strategy systematic fund, turning fund data, reporting and the investor pipeline into automated, reconciled workflows in Python, and giving the business development team numbers it could rely on.</p>
 
       <div class="kpis reveal">
         <div class="kpi"><div class="num"><span data-count="95">95</span>%</div><div class="lbl">Report processing time cut</div></div>
@@ -375,10 +385,10 @@ p,li{text-wrap:pretty}
       </div>
 
       <ul class="bullets reveal">
-        <li><b>Built an internal fund reporting application in Python</b> automating data cleaning, reconciliation and 7 report types across 3 strategies and 13 share classes; supported fund accounting including fee accruals, NAV checks and expense allocation.</li>
-        <li><b>Audited and consolidated the business development CRM</b> for a multi-strategy fund expanding across 20+ countries in APAC and LATAM: cleaned and merged 9,300+ records and audited engagement, pipeline, DDQ and lead-status data, consolidating USD 190m+ in potential AuM for re-engagement.</li>
-        <li><b>Built the recurring BD KPI dashboard</b> from HubSpot data, cutting production time by 90%, and developed LLM-based workflows for fund reporting adopted by the full BD team and Board.</li>
-        <li><b>Contributed to the investor and DDQ portal</b> architecture and data integration; computed quarterly commissions for third-party marketers.</li>
+        <li><b>Fund reporting.</b> Built an internal Python application that cleans and reconciles fund data and produces 7 report types across 3 strategies and 13 share classes. Alongside it, supported fund accounting on fee accruals, NAV checks and expense allocation.</li>
+        <li><b>CRM and pipeline.</b> The fund was expanding across 20+ countries in APAC and LATAM, and its business development CRM needed consolidating. Cleaned and merged 9,300+ records and audited engagement, pipeline, DDQ and lead-status data, bringing USD 190m+ of potential AuM back into view for re-engagement.</li>
+        <li><b>Dashboards and LLM workflows.</b> Built the recurring BD KPI dashboard from HubSpot data, cutting its production time by 90%, and developed LLM-based workflows for fund reporting that were adopted by the full BD team and the Board.</li>
+        <li><b>Investor portal.</b> Contributed to the architecture and data integration of the investor and DDQ portal, and computed quarterly commissions for third-party marketers.</li>
       </ul>
       <div class="tags reveal"><span class="tag">Python</span><span class="tag">Fund accounting</span><span class="tag">NAV</span><span class="tag">Data reconciliation</span><span class="tag">HubSpot</span><span class="tag">LLM workflows</span></div>
     </div>
@@ -392,7 +402,7 @@ p,li{text-wrap:pretty}
       <div>
         <h2 class="reveal">SYZ Bank</h2>
         <p class="meta reveal"><b>Summer Intern, CIO's Office and Research Department</b>Geneva, Sep 2025</p>
-        <p class="lede reveal">Working alongside the CIO and Chief Economist on macro research, fund selection and the analysis behind portfolio allocation.</p>
+        <p class="lede reveal">A month in the CIO's Office of a Geneva private bank, working alongside the CIO and the Chief Economist on macro research, fund selection and the analysis behind portfolio allocation, with two papers published under my name by the end of it.</p>
       </div>
       <img class="syz-logo reveal" src="images/syz-logo.png" alt="Syz Private Banking logo" width="140" height="98">
     </div>
@@ -413,11 +423,10 @@ p,li{text-wrap:pretty}
     </div>
 
     <ul class="bullets cols2 reveal">
-      <li><b>Co-authored 2 published Syz Focus papers</b>: the Swiss-US tariff dispute with the Chief Economist, and the 2025 SCO summit's geopolitical shifts with the CIO.</li>
-      <li><b>Built Excel models and dashboards</b> on Bloomberg Terminal data to evaluate investment strategies and portfolio allocation for the CIO.</li>
-      <li><b>Analysed equities, crypto assets and alternatives</b>, combining quantitative and fundamental approaches.</li>
-      <li><b>Performed SWOT and due diligence</b> on external funds and structured products; delivered investment presentations on macro outlook and fund selection.</li>
-      <li><b>Tested and implemented AI research tools</b> supporting equity and fixed income analysis.</li>
+      <li><b>Allocation support.</b> Built Excel models and dashboards on Bloomberg Terminal data that the CIO used to evaluate investment strategies and portfolio allocation.</li>
+      <li><b>Cross-asset analysis.</b> Covered equities, crypto assets and alternatives, combining quantitative and fundamental approaches rather than relying on either alone.</li>
+      <li><b>Fund selection.</b> Ran SWOT analyses and due diligence on external funds and structured products, and presented the macro outlook and fund selection views that came out of that work.</li>
+      <li><b>AI research tools.</b> Tested AI research tools for equity and fixed income analysis and helped implement the ones worth keeping.</li>
     </ul>
     <div class="tags reveal"><span class="tag">Bloomberg Terminal</span><span class="tag">Macro research</span><span class="tag">Fund due diligence</span><span class="tag">Structured products</span><span class="tag">Excel modelling</span></div>
   </div>
@@ -434,7 +443,7 @@ p,li{text-wrap:pretty}
       <svg class="gcp-mark reveal" viewBox="0 0 120 96" role="img" aria-label="Glauser Capital Partners logo"><rect x="12" y="0" width="96" height="96" rx="2" fill="#202020"/><text x="60" y="64" text-anchor="middle" textLength="116" lengthAdjust="spacingAndGlyphs" font-family="Geist, Arial, sans-serif" font-weight="700" font-size="44" fill="#e5dfcb">GCP</text></svg>
       <h2 class="reveal">Glauser Capital Partners</h2>
       <p class="meta reveal"><b>Founder &amp; CEO</b>Switzerland, Nov 2025 to present</p>
-      <p class="lede reveal">A real estate development platform for seasonal-worker housing in Swiss Alpine regions, built with a private-equity underwriting discipline.</p>
+      <p class="lede reveal">A development platform for purpose-built worker housing in the Swiss Alps, run with private-equity underwriting discipline.</p>
 
       <div class="figure reveal">
         <div class="big">CHF <span data-count="800">800</span>k+</div>
@@ -451,18 +460,40 @@ p,li{text-wrap:pretty}
         <p class="flow">Land &rarr; Construction budget &rarr; Financing &rarr; 5-year cash flows &rarr; Exit vs hold</p>
       </div>
 
-      <figure class="module reveal">
-        <img src="images/gcp-module.png" alt="Indicative floor plan of a standard housing unit module" width="557" height="828" loading="lazy">
-        <figcaption>Unit module, indicative plan</figcaption>
-      </figure>
-
+      <p class="subhead reveal">My role</p>
       <ul class="bullets reveal">
-        <li><b>Founded the platform and secured CHF 800k+</b> in soft equity commitments from private investors ahead of commercial registration (Q1 2027).</li>
-        <li><b>Built the underwriting model</b>: land acquisition, construction budget, 70% loan-to-cost financing, 5-year cash flows and exit vs hold scenarios, targeting a 35% investor IRR on a 2-year build-and-sell exit.</li>
-        <li><b>Structured investor terms and the fee model</b>; benchmarked pricing against 100+ regional market comparables.</li>
-        <li><b>Partnered with general contractor Group Comina</b> on cost estimation, permitting strategy and engagement with municipal authorities.</li>
+        <li><b>Founding and capital.</b> Founded the company and secured CHF 800k+ in soft equity commitments from private investors ahead of commercial registration in Q1 2027.</li>
+        <li><b>Underwriting.</b> Built the model from land acquisition to exit: construction budget, financing costs, operating expenses and five-year cash flows, stress-tested across sell and hold scenarios before any commitment. The base case targets a 35% investor IRR on a two-year build-and-sell exit.</li>
+        <li><b>Investor terms.</b> Structured the investor terms and fee model, and benchmarked pricing against 100+ regional market comparables.</li>
+        <li><b>Partners and communes.</b> Work with general contractor Group Comina on cost estimation and permitting strategy, and lead early engagement with municipal authorities.</li>
       </ul>
       <div class="tags reveal"><span class="tag">Underwriting</span><span class="tag">IRR / NPV</span><span class="tag">Sensitivity analysis</span><span class="tag">Capital raising</span><span class="tag">Development</span></div>
+    </div>
+  </div>
+
+  <div class="wrap gcp-more">
+    <div class="concept">
+      <div class="c-block reveal">
+        <h3>The problem</h3>
+        <p>Swiss resorts rely on thousands of seasonal workers every year, yet housing for them has become one of the scarcest assets in the Alps. Stricter building rules have raised construction costs, and new resort development favours high-end second homes. Staff end up in ageing buildings, short-term arrangements or long commutes, and hotels and restaurants pay for it in recruitment difficulties, turnover and service quality.</p>
+      </div>
+      <div class="c-block reveal">
+        <h3>The approach</h3>
+        <p>GCP develops small residential buildings on undeveloped land in Valais, close to Verbier, Zermatt, Saas-Fee and Crans-Montana, where hospitality demand is strongest and supply most constrained. Units are compact and built for year-round living, with durable materials and efficient layouts that keep construction and operating costs down. They are leased annually to hospitality operators under master leases: operators house their teams without tying up capital, and each project earns contracted income.</p>
+      </div>
+      <div class="c-block reveal">
+        <h3>Working locally</h3>
+        <p>Zoning, permitting and housing priorities change from one commune to the next, so projects are built with the community rather than around it. Communes are approached early, each building is aligned with local policy on housing for residents and workers, and GCP stays open to working with public housing bodies where it serves the building's long-term use.</p>
+      </div>
+      <div class="c-block reveal">
+        <h3>Structure</h3>
+        <p>Each development sits in its own dedicated vehicle, which isolates risk at project level and gives investors clear visibility on the asset they fund. Projects combine private equity with bank debt, and every site is screened for zoning compatibility, access, proximity to employers and construction feasibility before it moves forward.</p>
+      </div>
+    </div>
+    <p class="ambition reveal">The ambition: a repeatable model for Alpine worker housing, one well-executed project at a time, creating value for the people who keep Alpine tourism running, the regions that depend on them and the investors who fund it.</p>
+    <div class="gcp-visuals reveal">
+      <div class="media"><img src="images/gcp-night.jpg" alt="Evening rendering of the residential building" loading="lazy" data-fallback><div class="mono" aria-hidden="true">GCP</div></div>
+      <div class="media plan"><img src="images/gcp-plan.jpg" alt="Indicative floor plan of a one-bedroom unit with terrace" loading="lazy" data-fallback><div class="mono" aria-hidden="true">GCP</div></div>
     </div>
   </div>
 </section>
@@ -481,10 +512,10 @@ p,li{text-wrap:pretty}
     <div>
       <h2 class="reveal">Beric Management</h2>
       <p class="meta reveal"><b>Finance and Management Intern</b>Geneva, Jul 2023</p>
-      <p class="lede reveal">First exposure to the economics of real estate: budgets, cost control and what actually happens on site.</p>
+      <p class="lede reveal">My first internship, at a Geneva construction and development company. It was a first look at the economics of real estate: how budgets are built, where costs drift, and what actually happens on site between the plan and the finished building.</p>
       <ul class="bullets reveal">
-        <li><b>Supported budgeting, cost control and cost-optimisation analysis</b> on CHF 45M+ of construction projects.</li>
-        <li><b>Monitored on-site progress</b> and produced progress reports, coordinating contractors and stakeholders across the project value chain.</li>
+        <li><b>Budgets and cost control.</b> Supported budgeting, cost tracking and cost-optimisation analysis on CHF 45M+ of construction projects.</li>
+        <li><b>On site.</b> Followed progress on site and wrote the progress reports, coordinating with contractors and stakeholders across the project value chain.</li>
       </ul>
       <div class="tags reveal"><span class="tag">Budgeting</span><span class="tag">Cost control</span><span class="tag">Project monitoring</span></div>
     </div>
@@ -515,7 +546,7 @@ p,li{text-wrap:pretty}
       </ul>
       <div class="reveal">
         <ul class="bullets">
-          <li><b>Coach youth crews</b> in a weekly training programme for Ville de Genève and the Société Nautique de Genève.</li>
+          <li><b>Coaching.</b> Coach youth crews in a weekly training programme for Ville de Genève and the Société Nautique de Genève.</li>
         </ul>
         <div class="tags"><span class="tag">Leadership</span><span class="tag">Coaching</span><span class="tag">Performance under pressure</span></div>
       </div>

@@ -42,7 +42,9 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Photos (supplied by Arthur, resized to ≤2000px, JPEG q80): `portrait.jpg`, `gcp.jpg` (project rendering, label it as a rendering), `sailing-1.jpg` (cover), `sailing-2..7.jpg` (gallery: 3 wide + 3 tall, grid areas a-f). Torveo watermarks are the photographer's; leave them.
 - Missing images fall back to styled placeholders.
 
-- `gcp-module.png`: unit floor plan from the Alpods brochure. Only the building rendering and this plan may be used from Alpods material: never prices, address, plot number or unit grid.
+- `gcp-night.jpg` (evening rendering) and `gcp-plan.jpg` (unit floor plan) sit under the GCP concept text. Only the renderings and this plan may be used from Alpods material: never prices, address, plot number or unit grid.
+- GCP section = role (split, KPIs, capital stack, "My role" bullets) + concept blocks (problem, approach, working locally, structure) + ambition line. Keep the two halves non-overlapping.
+- Experience copy is written as short prose with bold lead-ins; only restate facts Arthur supplied, never invent outcomes.
 
 ## Notes
 - No certification credential IDs on the site (Arthur's decision).
