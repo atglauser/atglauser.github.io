@@ -16,14 +16,14 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px
 a{color:inherit}
 img{max-width:100%;display:block}
 h1,h2,h3{text-wrap:balance}
-p,li{text-wrap:pretty}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:16px;top:-60px;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:11;text-decoration:none}
 .skip:focus{top:12px}
 .wrap{max-width:var(--maxw);margin:0 auto;position:relative}
 
 /* Top bar + Experience sub-menu */
-.topbar{position:fixed;inset:0 0 auto 0;z-index:10;background:rgba(245,245,243,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+/* Solid bar on purpose: backdrop-filter blur re-renders on every scroll frame and caused lag */
+.topbar{position:fixed;inset:0 0 auto 0;z-index:10;background:#f5f5f3;border-bottom:1px solid var(--line)}
 .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:0 16px;height:56px;display:flex;align-items:center;gap:20px}
 .brand{font-weight:700;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
 .nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
@@ -32,7 +32,7 @@ p,li{text-wrap:pretty}
 .nav a:hover{color:var(--fg)}
 .nav a.active{background:var(--fg);color:#f5f5f3}
 .nav-exp::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 3px 7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
-.subnav{position:absolute;left:0;right:0;top:100%;background:rgba(245,245,243,.97);border-bottom:1px solid var(--line);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.subnav{position:absolute;left:0;right:0;top:100%;background:#f5f5f3;border-bottom:1px solid var(--line);opacity:0;transform:translateY(-6px);pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
 .topbar.in-exp .subnav,.topbar.peek .subnav,.subnav:focus-within{opacity:1;transform:none;pointer-events:auto}
 .subnav-inner{max-width:var(--maxw);margin:0 auto;padding:0 16px;height:44px;display:flex;align-items:center;justify-content:flex-end;gap:2px;overflow-x:auto;scrollbar-width:none}
 .subnav a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 10px;white-space:nowrap;transition:color .25s var(--ease),box-shadow .25s var(--ease)}
