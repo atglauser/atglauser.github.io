@@ -188,8 +188,9 @@ h1,h2,h3{text-wrap:balance}
 .theme-gcp .media{clip-path:var(--cut)}
 .theme-gcp .bullets li::before{top:.55em;width:9px;height:9px;background:var(--fg);transform:skewX(-20deg)}
 .theme-gcp .tag{border:1.5px solid var(--fg);color:var(--fg);text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:700}
-/* Original logo (dark square, cream letters) set on a larger pure black rectangle so it stands out */
-.gcp-mark{display:block;width:150px;height:auto;padding:22px 30px;background:#000000;margin-bottom:28px}
+/* Original logo (dark square, cream letters) set on a larger black diamond so it stands out */
+.gcp-plate{display:grid;place-items:center;width:164px;height:164px;background:#000000;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);margin-bottom:20px}
+.gcp-mark{display:block;width:80px;height:auto}
 .figure{border-top:8px solid var(--fg);padding-top:18px;margin-bottom:24px}
 .figure .big{font-size:clamp(60px,9.5vw,120px);font-weight:800;letter-spacing:-.055em;line-height:.88;color:var(--accent);font-variant-numeric:tabular-nums}
 .figure .lbl{font-size:13px;color:var(--muted);margin-top:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
