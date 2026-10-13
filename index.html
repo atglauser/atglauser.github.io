@@ -194,6 +194,12 @@ p,li{text-wrap:pretty}
 .results li.win::before{background:var(--accent)}
 .results .place{font-weight:700}
 .results .ev{color:var(--muted);font-size:14.5px}
+.award-list{list-style:none;display:grid;gap:16px;margin-bottom:36px}
+.award-list li{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:baseline}
+.award-list .yr{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent)}
+.award-list b{display:block;font-weight:600}
+.award-list div span{font-size:14.5px;color:var(--muted)}
+
 /* Gallery: 3 wide + 3 tall photos, exactly 9 cells */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:10px;margin-top:72px;
   grid-template-areas:"a b c" "d b e" "d f e"}
@@ -545,6 +551,13 @@ p,li{text-wrap:pretty}
         <li><div class="place">Regular</div><div class="ev">J/70 Winter Series, Monaco and Barcelona, 2022 to 2026</div></li>
       </ul>
       <div class="reveal">
+        <p class="subhead">Société Nautique de Genève distinctions</p>
+        <ul class="award-list">
+          <li><span class="yr">2025</span><div><b>Special Distinction</b><span>Performance, Translémanique en Solitaire</span></div></li>
+          <li><span class="yr">2025</span><div><b>Sports Merit Award</b><span>Excellence and commitment</span></div></li>
+          <li><span class="yr">2023</span><div><b>Sports Merit Award</b><span>Results and commitment</span></div></li>
+          <li><span class="yr">2022</span><div><b>Sports Merit Award</b><span>Leadership, team building and organisation</span></div></li>
+        </ul>
         <ul class="bullets">
           <li><b>Coaching.</b> Coach youth crews in a weekly training programme for Ville de Genève and the Société Nautique de Genève.</li>
         </ul>
@@ -585,7 +598,7 @@ p,li{text-wrap:pretty}
         <p class="meta"><b>Bilingual Matura (French &amp; German), with honours</b>2021 to 2024</p>
         <ul>
           <li>Focus: Physics, Advanced Mathematics, Coding</li>
-          <li>Matura paper on AI as a tool of population control in modern China, nominated by Human Rights Watch</li>
+          <li>Matura paper &ldquo;Artificial Intelligence as a Tool of Population Control in Modern China?&rdquo;, nominated by Human Rights Watch (June 2024)</li>
         </ul>
       </div>
       <div class="cell wide reveal">
