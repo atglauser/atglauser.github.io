@@ -76,7 +76,7 @@ p,li{text-wrap:pretty}
 .hero h1{font-size:clamp(52px,7.5vw,96px);line-height:.95;letter-spacing:-.045em;font-weight:700}
 .hero .sub{font-size:clamp(17px,1.9vw,20px);color:var(--muted);margin:26px 0 34px;max-width:30em}
 .portrait{aspect-ratio:4/5;border-radius:12px;overflow:hidden;position:relative;background:#1c1e21}
-.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
 .portrait .initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(72px,9vw,112px);font-weight:700;letter-spacing:-.05em;color:#3a3d42}
 .portrait.hasimg .initials{display:none}
 
@@ -151,6 +151,7 @@ p,li{text-wrap:pretty}
 /* GCP: Swiss print. Sharp grid, oversized figure, alpine green */
 .theme-gcp{--bg:#eef0eb;--fg:#15201a;--muted:#536058;--accent:#2b6649;--card:#f7f8f5;--line:#cdd5cd;--r:0px;--ph:linear-gradient(170deg,#c9d6cc,#2b6649);--ph-fg:rgba(255,255,255,.5)}
 .theme-gcp h2{font-weight:800;letter-spacing:-.045em}
+.gcp-mark{display:block;width:72px;height:auto;margin-bottom:24px}
 .figure{border-top:3px solid var(--fg);padding-top:16px;margin-bottom:24px}
 .figure .big{font-size:clamp(56px,9vw,112px);font-weight:800;letter-spacing:-.05em;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums}
 .figure .lbl{font-size:14px;color:var(--muted);margin-top:10px}
@@ -185,11 +186,13 @@ p,li{text-wrap:pretty}
 .results li.win::before{background:var(--accent)}
 .results .place{font-weight:700}
 .results .ev{color:var(--muted);font-size:14.5px}
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
-.gallery .ph{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,#9cc9dd,#0b6f9f)}
+/* Gallery: 3 wide + 3 tall photos, exactly 9 cells */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:10px;margin-top:72px;
+  grid-template-areas:"a b c" "d b e" "d f e"}
+.gallery .ph{border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,#9cc9dd,#0b6f9f)}
 .gallery .ph img{width:100%;height:100%;object-fit:cover}
-.gallery .ph.missing{display:none}
-.gallery:not(:has(.ph:not(.missing))){display:none}
+.gallery .ph.missing{visibility:hidden}
+.g-a{grid-area:a}.g-b{grid-area:b}.g-c{grid-area:c}.g-d{grid-area:d}.g-e{grid-area:e}.g-f{grid-area:f}
 
 /* Education: minimalist document, asymmetric bento */
 .theme-edu{--bg:#fbfbfa;--fg:#1d1f21;--muted:#6b6e72;--accent:#1d1f21;--card:#ffffff;--line:#eaeaea;--r:10px;--display:var(--serif)}
@@ -254,6 +257,7 @@ p,li{text-wrap:pretty}
   .stats-inner{grid-template-columns:1fr 1fr}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px;margin-top:48px;grid-template-areas:"a a" "b d" "b d" "c f" "e e"}
   .bento{grid-template-columns:1fr}
   .cell.wide{grid-column:auto}
   .cell,.skill-cell{padding:24px}
@@ -420,10 +424,11 @@ p,li{text-wrap:pretty}
 <section class="chapter theme-gcp" id="gcp">
   <div class="wrap split flip">
     <div class="media reveal">
-      <img src="images/gcp.jpg" alt="Alpine development site" data-fallback>
+      <img src="images/gcp.jpg" alt="Rendering of an Alpine residential project" data-fallback>
       <div class="mono" aria-hidden="true">GCP</div>
     </div>
     <div>
+      <svg class="gcp-mark reveal" viewBox="0 0 120 96" role="img" aria-label="Glauser Capital Partners logo"><rect x="12" y="0" width="96" height="96" rx="2" fill="#202020"/><text x="60" y="64" text-anchor="middle" textLength="116" lengthAdjust="spacingAndGlyphs" font-family="Geist, Arial, sans-serif" font-weight="700" font-size="44" fill="#e5dfcb">GCP</text></svg>
       <h2 class="reveal">Glauser Capital Partners</h2>
       <p class="meta reveal"><b>Founder &amp; CEO</b>Switzerland, Nov 2025 to present</p>
       <p class="lede reveal">A real estate development platform for seasonal-worker housing in Swiss Alpine regions, built with a private-equity underwriting discipline.</p>
@@ -483,7 +488,7 @@ p,li{text-wrap:pretty}
 <!-- SAILING -->
 <section class="chapter theme-sail" id="sailing">
   <div class="cover">
-    <img src="images/sailing-1.jpg" alt="Arthur racing a J/70" data-hide>
+    <img src="images/sailing-1.jpg" alt="Racing yacht SUI 1090 under sail on Lake Geneva" data-hide>
     <div class="wrap">
       <h2 class="reveal">Competitive Sailing</h2>
       <p class="meta reveal"><b>Semi-professional sailor and coach</b>Société Nautique de Genève and Ville de Genève, 2023 to present</p>
@@ -491,7 +496,8 @@ p,li{text-wrap:pretty}
     </div>
   </div>
   <div class="sail-body">
-    <div class="wrap sail-grid">
+    <div class="wrap">
+    <div class="sail-grid">
       <ul class="results reveal">
         <li class="win"><div class="place">Winner</div><div class="ev">Translémanique en Solitaire 2025 (J/70)</div></li>
         <li class="win"><div class="place">Winner</div><div class="ev">SSL Promotion League 2025</div></li>
@@ -500,15 +506,20 @@ p,li{text-wrap:pretty}
         <li><div class="place">Regular</div><div class="ev">J/70 Winter Series, Monaco and Barcelona, 2022 to 2026</div></li>
       </ul>
       <div class="reveal">
-        <div class="gallery">
-          <div class="ph"><img src="images/sailing-2.jpg" alt="J/70 racing" data-hide></div>
-          <div class="ph"><img src="images/sailing-3.jpg" alt="J/70 racing" data-hide></div>
-        </div>
         <ul class="bullets">
           <li><b>Coach youth crews</b> in a weekly training programme for Ville de Genève and the Société Nautique de Genève.</li>
         </ul>
         <div class="tags"><span class="tag">Leadership</span><span class="tag">Coaching</span><span class="tag">Performance under pressure</span></div>
       </div>
+    </div>
+    <div class="gallery reveal">
+      <div class="ph g-a"><img src="images/sailing-2.jpg" alt="J/70 fleet racing off Barcelona" loading="lazy" data-hide></div>
+      <div class="ph g-b"><img src="images/sailing-6.jpg" alt="Foiling on Lake Garda" loading="lazy" data-hide></div>
+      <div class="ph g-c"><img src="images/sailing-4.jpg" alt="J/70 crew working the cockpit" loading="lazy" data-hide></div>
+      <div class="ph g-d"><img src="images/sailing-5.jpg" alt="WASZP foiling dinghy" loading="lazy" data-hide></div>
+      <div class="ph g-e"><img src="images/sailing-7.jpg" alt="View up the mast under sail" loading="lazy" data-hide></div>
+      <div class="ph g-f"><img src="images/sailing-3.jpg" alt="J/70 crew hiking out off Barcelona" loading="lazy" data-hide></div>
+    </div>
     </div>
   </div>
 </section>

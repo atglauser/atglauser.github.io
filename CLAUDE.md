@@ -38,11 +38,11 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 
 ## Images
-- Company logos (from official sites; Syz from blog.syzgroup.com): `images/dcm-logo.svg` (recoloured to light greys for the dark section), `syz-logo.png` (140px native, keep small), `beric-logo.png`. Shown on `.media.logo` plates.
-- Still missing, fall back to styled placeholders: `portrait.jpg`, `gcp.jpg` (no GCP logo yet), `sailing-1.jpg` (full-width cover), `sailing-2.jpg`, `sailing-3.jpg`.
+- Company logos (from official sites; Syz from blog.syzgroup.com): `images/dcm-logo.svg` (recoloured to light greys for the dark section), `syz-logo.png` (140px native, keep small), `beric-logo.png`. Shown on `.media.logo` plates. GCP logo is an inline SVG (dark square, cream "GCP") in the GCP section.
+- Photos (supplied by Arthur, resized to ≤2000px, JPEG q80): `portrait.jpg`, `gcp.jpg` (project rendering, label it as a rendering), `sailing-1.jpg` (cover), `sailing-2..7.jpg` (gallery: 3 wide + 3 tall, grid areas a-f). Torveo watermarks are the photographer's; leave them.
+- Missing images fall back to styled placeholders.
 
 ## Open items
-- Portrait, GCP visual and sailing photos; update the generic gallery alt text then.
 - Certification credential IDs/links (LinkedIn blocks automated access; Arthur to paste them).
 - DataCamp: only Python Data Fundamentals and SQL Fundamentals are completed (Associate Data Scientist was never done; don't list it).
 
