@@ -32,7 +32,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - **Conservative figures.** GCP: CHF 800k+ *soft commitments*, registration Q1 2027 (not "raised CHF 1M"). Matura 2021 to 2024.
 - **No private data on the public site:** no home address, phone number or date of birth.
 - **No CV download.** The site is the CV; Arthur tailors PDF versions per application. Don't add `cv.pdf` or download buttons.
-- **Exchange school not confirmed.** Never write its name in the HTML; the Education card shows `images/exchange-blur.png`, a pre-blurred render of the name (unreadable, no text in source). Contact text says "exchange semester abroad".
+- **Exchange school not confirmed.** Never write its name in the HTML; the Education card shows `images/exchange-blur.png`, a pre-blurred render of the name (unreadable, no text in source). Contact text says "exchange semester in the US" (country only).
 - **4 languages** stat stays (Swiss German counted separately).
 - SYZ papers: one co-authored with the Chief Economist (Swiss-US tariffs), one with the CIO (SCO). Not "both with CIO and Chief Economist".
 - Distinctions (from Arthur's LinkedIn): SNG Special Distinction 2025 (Translémanique en Solitaire performance), SNG Sports Merit Awards 2025, 2023, 2022, Human Rights Watch nomination 2024 (Matura paper). No J/70 league bronze results.
