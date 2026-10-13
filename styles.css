@@ -16,6 +16,8 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px
 a{color:inherit}
 img{max-width:100%;display:block}
 h1,h2,h3{text-wrap:balance}
+/* Justified body copy; hyphenation keeps word gaps even, especially in narrow columns */
+.lede,.bullets li,.c-block p,.xp-sum,.contact p,.hero .sub,.cell li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:16px;top:-60px;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:11;text-decoration:none}
 .skip:focus{top:12px}
