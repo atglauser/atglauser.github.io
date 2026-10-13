@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arthur Glauser</title>
+<meta name="description" content="Arthur Glauser. Economics at the University of St. Gallen (HSG), Minor in Data Science. Experience in systematic funds, private banking research and real estate development.">
+<meta property="og:title" content="Arthur Glauser">
+<meta property="og:description" content="Economics at HSG. Systematic funds, investment research, real estate development.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --bg:#f7f6f2; --fg:#15171c; --muted:#5f6470; --accent:#1f3fd1; --card:#ffffff; --line:#e3e1da;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* Top bar */
+.topbar{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(247,246,242,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:var(--maxw);margin:0 auto;padding:0 16px;height:56px;display:flex;align-items:center;gap:20px}
+.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
+.nav a:hover{color:var(--fg)}
+.nav a.active{background:var(--fg);color:#fff}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent)}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:96px 16px 48px}
+.hero-inner{max-width:var(--maxw);margin:0 auto;width:100%;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-size:clamp(44px,7vw,88px);line-height:.98;letter-spacing:-.04em;font-weight:800}
+.hero .sub{font-size:clamp(17px,2vw,20px);color:var(--muted);margin:24px 0 28px;max-width:560px}
+.hero .sub strong{color:var(--fg);font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.pill{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:12px 18px;border-radius:10px;text-decoration:none;border:1px solid var(--fg);transition:transform .15s,background .2s,color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--fg);color:#fff}
+.btn.ghost{background:transparent}
+.btn svg{width:16px;height:16px}
+.portrait{aspect-ratio:4/5;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(150deg,#1f3fd1,#0b1b3a 60%,#0b0f14)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait .initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:96px;font-weight:800;color:rgba(255,255,255,.9);letter-spacing:-.04em}
+.portrait.hasimg .initials{display:none}
+.scrollhint{margin-top:40px;font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.08em}
+
+/* Stats strip */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.stats-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:28px 16px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .num{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.03em}
+.stat .lbl{font-size:13px;color:var(--muted)}
+
+/* Chapters */
+.chapter{background:var(--bg);color:var(--fg);padding:110px 16px;position:relative;overflow:hidden}
+.chapter-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.chapter.flip .chapter-media{order:2}
+.chapter-media{position:sticky;top:96px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:
+  repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.05) 22px 23px),
+  linear-gradient(160deg,var(--accent),var(--bg) 85%)}
+.chapter-media img{width:100%;height:100%;object-fit:cover}
+.chapter-media .glyph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.55}
+.chapter-media .glyph svg{width:38%;height:auto;color:var(--fg)}
+.chapter-media.hasimg .glyph{display:none}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.chapter h2{font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-weight:800}
+.meta{margin:12px 0 24px;color:var(--muted);font-size:15px}
+.lede{font-size:clamp(17px,1.8vw,20px);line-height:1.55;margin-bottom:32px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:36px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.kpi .num{font-size:clamp(20px,2.3vw,28px);white-space:nowrap;font-weight:800;letter-spacing:-.03em;color:var(--accent)}
+.kpi .lbl{font-size:12.5px;color:var(--muted);line-height:1.4}
+.bullets{list-style:none;display:grid;gap:14px;margin-bottom:32px}
+.bullets li{position:relative;padding-left:22px;font-size:15.5px}
+.bullets li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+.bullets b{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12.5px;padding:5px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--muted)}
+.subhead{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:8px 0 14px}
+
+/* DCM theme: systematic / terminal */
+.theme-dcm{--bg:#0a0e13;--fg:#e7edf3;--muted:#8a97a6;--accent:#3ee08f;--card:#111821;--line:#1e2935}
+.theme-dcm::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;opacity:.35;pointer-events:none;mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%)}
+.theme-dcm .chapter-inner{position:relative}
+.theme-dcm .kpi .num,.theme-dcm .kicker{font-family:var(--mono)}
+.pipeline{font-family:var(--mono);font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:32px}
+.pipeline .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pipeline .step{padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#0d131a}
+.pipeline .step.out{border-color:var(--accent);color:var(--accent)}
+.pipeline .arrow{color:var(--muted)}
+.pipeline .cap{color:var(--muted);margin-top:12px;font-size:12px}
+.pipeline .cap span{color:var(--accent)}
+
+/* SYZ theme: private banking */
+.theme-syz{--bg:#0e1a2c;--fg:#f2eee5;--muted:#b3ac9d;--accent:#cfa960;--card:#14233a;--line:#26364f}
+.theme-syz h2,.theme-syz .lede{font-family:var(--serif);font-weight:400;letter-spacing:-.02em}
+.theme-syz h2{font-weight:600}
+.papers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
+.paper{border:1px solid var(--line);border-radius:4px;padding:20px;background:var(--card);position:relative}
+.paper::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+.paper .t{font-family:var(--serif);font-size:18px;margin-bottom:6px}
+.paper .d{font-size:13px;color:var(--muted)}
+
+/* GCP theme: real estate / PE */
+.theme-gcp{--bg:#f3f0e8;--fg:#1b221e;--muted:#5b655e;--accent:#2d6a4d;--card:#ffffff;--line:#ddd6c6}
+.stack{margin-bottom:32px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stack .bar{display:flex;height:44px;border-radius:8px;overflow:hidden;font-size:13px;font-weight:600}
+.stack .debt{flex:0 0 70%;background:#c9d8cf;color:#1b221e;display:flex;align-items:center;padding-left:12px}
+.stack .eq{flex:1;background:var(--accent);color:#fff;display:flex;align-items:center;padding-left:12px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+.flow span.s{padding:4px 9px;border-radius:999px;border:1px solid var(--line)}
+
+/* Beric theme: construction */
+.theme-beric{--bg:#e9e4db;--fg:#211d19;--muted:#6a6158;--accent:#b0602a;--card:#f6f2ec;--line:#d6cdbf}
+
+/* Sailing theme */
+.theme-sail{--bg:#e8f2f6;--fg:#0b2a3a;--muted:#4a6676;--accent:#0b7db3;--card:#ffffff;--line:#cde0e8}
+.results{list-style:none;border-left:2px solid var(--line);margin:0 0 32px 6px}
+.results li{position:relative;padding:0 0 18px 22px}
+.results li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--card);border:2px solid var(--accent)}
+.results li.win::before{background:var(--accent)}
+.results .place{font-weight:700}
+.results .ev{color:var(--muted);font-size:14.5px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:32px}
+.gallery .ph{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#9cc9dd,#0b7db3)}
+.gallery .ph img{width:100%;height:100%;object-fit:cover}
+.gallery .ph.missing{display:none}
+
+/* Plain sections */
+.section{padding:110px 16px;border-top:1px solid var(--line)}
+.section-inner{max-width:var(--maxw);margin:0 auto}
+.section h2{font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:40px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
+.card .meta{margin:0 0 12px;font-size:14px}
+.card ul{list-style:none;display:grid;gap:8px;font-size:14.5px}
+.card li{padding-left:16px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:16px}
+.cert{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card)}
+.cert .w{font-weight:600;font-size:14.5px}
+.cert .o{font-size:13px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;padding:7px 12px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
+.lang{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.lang span:last-child{font-family:var(--mono);color:var(--muted)}
+
+/* Contact */
+.contact{background:#15171c;color:#f2f2f0;padding:120px 16px 60px}
+.contact .section-inner{text-align:left}
+.contact h2{font-size:clamp(40px,7vw,80px);letter-spacing:-.04em;line-height:1;font-weight:800;margin-bottom:24px}
+.contact p{color:#a9adb7;font-size:18px;max-width:560px;margin-bottom:32px}
+.contact .btn{border-color:#f2f2f0}
+.contact .btn.primary{background:#f2f2f0;color:#15171c}
+.foot{margin-top:80px;font-size:12px;color:#6f7480;font-family:var(--mono)}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero-inner,.chapter-inner,.grid2{grid-template-columns:1fr}
+  .hero-inner{gap:32px}
+  .portrait{max-width:320px;aspect-ratio:1/1}
+  .chapter{padding:80px 16px}
+  .chapter-media{position:relative;top:0;aspect-ratio:16/10}
+  .chapter.flip .chapter-media{order:0}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .kpis{grid-template-columns:1fr 1fr}
+  .papers{grid-template-columns:1fr}
+  .brand{display:none}
+  .nav{margin-left:0}
+}
+
+/* Print */
+@media print{
+  .topbar,.btns,.scrollhint,.chapter-media,.gallery,.portrait{display:none!important}
+  .chapter,.section,.contact,.stats{background:#fff!important;color:#000!important;padding:24px 0!important}
+  .chapter *,.contact *{color:#000!important}
+  .hero{min-height:auto;padding:0}
+  .chapter-inner,.hero-inner{grid-template-columns:1fr}
+  .theme-dcm::before{display:none}
+  .js .reveal{opacity:1;transform:none}
+  .chapter,.card{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">Arthur Glauser</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#dcm">DCM Systematic</a>
+      <a href="#syz">SYZ Bank</a>
+      <a href="#gcp">Glauser Capital</a>
+      <a href="#beric">Beric</a>
+      <a href="#sailing">Sailing</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal">
+      <p class="eyebrow">Economics · Data Science · Finance</p>
+      <h1>Arthur<br>Glauser</h1>
+      <p class="sub">Economics undergraduate at the <strong>University of St. Gallen (HSG)</strong>, Minor in Data Science, exchange at <strong>UC Berkeley</strong> in spring 2027. Experience across a systematic hedge fund, private bank research and real estate development, with Python and data automation as the common thread.</p>
+      <div class="pills">
+        <span class="pill">Geneva · St. Gallen</span>
+        <span class="pill">Open to summer 2027 internships</span>
+        <span class="pill">FR · EN · DE</span>
+      </div>
+      <div class="btns">
+        <!-- Upload your CV to the repo as cv.pdf -->
+        <a class="btn primary" href="cv.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>
+          Download CV
+        </a>
+        <!-- Replace with your LinkedIn URL -->
+        <a class="btn ghost" href="https://www.linkedin.com/in/REPLACE-ME" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/atglauser" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="mailto:arthur.glauser27@gmail.com">Email</a>
+      </div>
+      <p class="scrollhint">↓ SCROLL THROUGH THE EXPERIENCE</p>
+    </div>
+    <div class="portrait reveal" id="portrait">
+      <img src="images/portrait.jpg" alt="Portrait of Arthur Glauser" data-fallback>
+      <div class="initials">AG</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="Highlights">
+  <div class="stats-inner">
+    <div class="stat"><div class="num"><span data-count="95">0</span>%</div><div class="lbl">Fund reporting time cut at DCM</div></div>
+    <div class="stat"><div class="num">CHF <span data-count="800">0</span>k+</div><div class="lbl">Investor soft commitments, GCP</div></div>
+    <div class="stat"><div class="num"><span data-count="2">0</span></div><div class="lbl">Published research papers, SYZ</div></div>
+    <div class="stat"><div class="num"><span data-count="4">0</span></div><div class="lbl">Languages spoken</div></div>
+  </div>
+</section>
+
+<!-- DCM -->
+<section class="chapter theme-dcm" id="dcm">
+  <div class="chapter-inner">
+    <div class="chapter-media reveal">
+      <img src="images/dcm.jpg" alt="DCM Systematic, Geneva" data-fallback>
+      <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 20h18M5 16l4-5 4 3 6-8"/><circle cx="19" cy="6" r="1.2"/></svg></div>
+    </div>
+    <div class="chapter-body">
+      <p class="kicker reveal">01 · Systematic investing</p>
+      <h2 class="reveal">DCM Systematic</h2>
+      <p class="meta reveal">Summer Analyst · Geneva · Aug to Sep 2026</p>
+      <p class="lede reveal">Inside a multi-strategy systematic fund: turning fund data, reporting and investor pipelines into automated, reconciled workflows in Python.</p>
+
+      <div class="kpis reveal">
+        <div class="kpi"><div class="num"><span data-count="95">0</span>%</div><div class="lbl">Report processing time cut</div></div>
+        <div class="kpi"><div class="num"><span data-count="90">0</span>%</div><div class="lbl">Fewer reconciliation errors</div></div>
+        <div class="kpi"><div class="num">$<span data-count="190">0</span>m+</div><div class="lbl">Prospect AuM pipeline consolidated</div></div>
+      </div>
+
+      <div class="pipeline reveal" aria-label="Reporting pipeline">
+        <div class="row">
+          <span class="step">raw fund data</span><span class="arrow">→</span>
+          <span class="step">cleaning</span><span class="arrow">→</span>
+          <span class="step">reconciliation</span><span class="arrow">→</span>
+          <span class="step out">7 report types</span>
+        </div>
+        <div class="cap">python · <span>3</span> strategies · <span>13</span> share classes</div>
+      </div>
+
+      <ul class="bullets reveal">
+        <li><b>Built an internal fund reporting application in Python</b> automating data cleaning, reconciliation and 7 report types across 3 strategies and 13 share classes; supported fund accounting including fee accruals, NAV checks and expense allocation.</li>
+        <li><b>Audited and consolidated the business development CRM</b> for a multi-strategy fund expanding across 20+ countries in APAC and LATAM: cleaned and merged 9,300+ records and audited engagement, pipeline, DDQ and lead-status data, consolidating USD 190m+ in potential AuM for re-engagement.</li>
+        <li><b>Built the recurring BD KPI dashboard</b> from HubSpot data, cutting production time by 90%, and developed LLM-based workflows for fund reporting adopted by the full BD team and Board.</li>
+        <li><b>Contributed to the investor and DDQ portal</b> architecture and data integration; computed quarterly commissions for third-party marketers.</li>
+      </ul>
+      <div class="tags reveal"><span class="tag">Python</span><span class="tag">Fund accounting</span><span class="tag">NAV</span><span class="tag">Data reconciliation</span><span class="tag">HubSpot</span><span class="tag">LLM workflows</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SYZ -->
+<section class="chapter theme-syz flip" id="syz">
+  <div class="chapter-inner">
+    <div class="chapter-media reveal">
+      <img src="images/syz.jpg" alt="SYZ Bank, Geneva" data-fallback>
+      <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 21h18M4 10h16M12 3l9 5H3l9-5zM6 10v8m4-8v8m4-8v8m4-8v8"/></svg></div>
+    </div>
+    <div class="chapter-body">
+      <p class="kicker reveal">02 · Private banking &amp; research</p>
+      <h2 class="reveal">SYZ Bank</h2>
+      <p class="meta reveal">Summer Intern, CIO's Office and Research Department · Geneva · Sep 2025</p>
+      <p class="lede reveal">Working alongside the CIO and Chief Economist on macro research, fund selection and the analysis behind portfolio allocation.</p>
+
+      <!-- Add links to the published papers here if they are public -->
+      <div class="papers reveal">
+        <div class="paper"><div class="t">Macroeconomic research</div><div class="d">Externally published paper, co-authored with the CIO and Chief Economist. Named contributor.</div></div>
+        <div class="paper"><div class="t">Geopolitical research</div><div class="d">Externally published paper, co-authored with the CIO and Chief Economist. Named contributor.</div></div>
+      </div>
+
+      <ul class="bullets reveal">
+        <li><b>Co-authored 2 externally published</b> macroeconomic and geopolitical research papers with the CIO and Chief Economist.</li>
+        <li><b>Built Excel models and dashboards</b> on Bloomberg Terminal data to evaluate investment strategies and portfolio allocation for the CIO.</li>
+        <li><b>Analysed equities, crypto assets and alternatives</b>, combining quantitative and fundamental approaches.</li>
+        <li><b>Performed SWOT and due diligence</b> on external funds and structured products; delivered investment presentations on macro outlook and fund selection.</li>
+        <li><b>Tested and implemented AI research tools</b> supporting equity and fixed income analysis.</li>
+      </ul>
+      <div class="tags reveal"><span class="tag">Bloomberg Terminal</span><span class="tag">Macro research</span><span class="tag">Fund due diligence</span><span class="tag">Structured products</span><span class="tag">Excel modelling</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GCP -->
+<section class="chapter theme-gcp" id="gcp">
+  <div class="chapter-inner">
+    <div class="chapter-media reveal">
+      <img src="images/gcp.jpg" alt="Alpine development site" data-fallback>
+      <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 20l7-12 4 6 3-4 6 10H2z"/><path d="M14 20v-4h3v4"/></svg></div>
+    </div>
+    <div class="chapter-body">
+      <p class="kicker reveal">03 · Real estate &amp; private equity</p>
+      <h2 class="reveal">Glauser Capital Partners</h2>
+      <p class="meta reveal">Founder &amp; CEO · Switzerland · Nov 2025 to present</p>
+      <p class="lede reveal">A real estate development platform for seasonal-worker housing in Swiss Alpine regions, built with a private-equity underwriting discipline.</p>
+
+      <div class="kpis reveal">
+        <div class="kpi"><div class="num">CHF <span data-count="800">0</span>k+</div><div class="lbl">Investor soft commitments</div></div>
+        <div class="kpi"><div class="num"><span data-count="35">0</span>%</div><div class="lbl">Target investor IRR, 2-year exit</div></div>
+        <div class="kpi"><div class="num"><span data-count="20">0</span>+</div><div class="lbl">Development sites screened</div></div>
+      </div>
+
+      <div class="stack reveal">
+        <p class="subhead" style="margin-top:0">Capital structure</p>
+        <div class="bar"><div class="debt">70% loan-to-cost</div><div class="eq">Equity</div></div>
+        <div class="flow"><span class="s">Land</span>→<span class="s">Construction budget</span>→<span class="s">Financing</span>→<span class="s">5-year cash flows</span>→<span class="s">Exit vs hold</span></div>
+      </div>
+
+      <ul class="bullets reveal">
+        <li><b>Founded the platform and secured CHF 800k+</b> in soft equity commitments from private investors ahead of commercial registration (Q1 2027).</li>
+        <li><b>Built the underwriting model</b>: land acquisition, construction budget, 70% loan-to-cost financing, 5-year cash flows and exit vs hold scenarios, targeting a 35% investor IRR on a 2-year build-and-sell exit.</li>
+        <li><b>Structured investor terms and the fee model</b>; benchmarked pricing against 100+ regional market comparables.</li>
+        <li><b>Partnered with general contractor Group Comina</b> on cost estimation, permitting strategy and engagement with municipal authorities.</li>
+      </ul>
+      <div class="tags reveal"><span class="tag">Underwriting</span><span class="tag">IRR / NPV</span><span class="tag">Sensitivity analysis</span><span class="tag">Capital raising</span><span class="tag">Development</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BERIC -->
+<section class="chapter theme-beric flip" id="beric">
+  <div class="chapter-inner">
+    <div class="chapter-media reveal">
+      <img src="images/beric.jpg" alt="Construction project, Geneva" data-fallback>
+      <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 21V9l8-5 8 5v12M9 21v-6h6v6M4 21h16"/></svg></div>
+    </div>
+    <div class="chapter-body">
+      <p class="kicker reveal">04 · Construction finance</p>
+      <h2 class="reveal">Beric Management</h2>
+      <p class="meta reveal">Finance and Management Intern · Geneva · Jul 2023</p>
+      <p class="lede reveal">First exposure to the economics of real estate: budgets, cost control and what actually happens on site.</p>
+      <div class="kpis reveal">
+        <div class="kpi"><div class="num">CHF <span data-count="45">0</span>M+</div><div class="lbl">Construction projects supported</div></div>
+      </div>
+      <ul class="bullets reveal">
+        <li><b>Supported budgeting, cost control and cost-optimisation analysis</b> on CHF 45M+ of construction projects.</li>
+        <li><b>Monitored on-site progress</b> and produced progress reports, coordinating contractors and stakeholders across the project value chain.</li>
+      </ul>
+      <div class="tags reveal"><span class="tag">Budgeting</span><span class="tag">Cost control</span><span class="tag">Project monitoring</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAILING -->
+<section class="chapter theme-sail" id="sailing">
+  <div class="chapter-inner">
+    <div class="chapter-media reveal">
+      <img src="images/sailing-1.jpg" alt="Arthur racing a J/70" data-fallback>
+      <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v14M12 4l7 12h-7M12 6l-6 10h6M3 19c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg></div>
+    </div>
+    <div class="chapter-body">
+      <p class="kicker reveal">05 · Competition &amp; coaching</p>
+      <h2 class="reveal">Competitive Sailing</h2>
+      <p class="meta reveal">Semi-professional sailor and coach · Société Nautique de Genève &amp; Ville de Genève · 2023 to present</p>
+      <p class="lede reveal">Five or more performance sessions a week, racing at national and European level, and coaching youth crews in French, English and German.</p>
+
+      <ul class="results reveal">
+        <li class="win"><div class="place">Winner</div><div class="ev">Translémanique en Solitaire 2025 (J/70)</div></li>
+        <li class="win"><div class="place">Winner</div><div class="ev">SSL Promotion League 2025</div></li>
+        <li><div class="place">2nd</div><div class="ev">Genève-Rolle-Genève 2025</div></li>
+        <li><div class="place">10th</div><div class="ev">J/70 Youth European Championship 2023</div></li>
+        <li><div class="place">Regular</div><div class="ev">J/70 Winter Series, Monaco &amp; Barcelona, 2022 to 2026</div></li>
+      </ul>
+
+      <div class="gallery reveal">
+        <div class="ph"><img src="images/sailing-2.jpg" alt="Sailing" data-hide></div>
+        <div class="ph"><img src="images/sailing-3.jpg" alt="Sailing" data-hide></div>
+      </div>
+
+      <ul class="bullets reveal">
+        <li><b>Coach youth crews</b> in a weekly training programme for Ville de Genève and the Société Nautique de Genève.</li>
+      </ul>
+      <div class="tags reveal"><span class="tag">Leadership</span><span class="tag">Coaching</span><span class="tag">Performance under pressure</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <p class="kicker reveal">06 · Education</p>
+    <h2 class="reveal">Education &amp; certifications</h2>
+    <div class="grid2">
+      <div class="card reveal">
+        <h3>University of St. Gallen (HSG)</h3>
+        <p class="meta">Bachelor of Economics, English Track · Major Economics, Minor Data Science · 2024 to 2027</p>
+        <ul>
+          <li>Courses: Commodity Trading, Equity Investing &amp; Fundamental Analysis, Data Analytics, Data Handling, Accounting</li>
+          <li>Member: Hedge Fund Club, Private Equity &amp; Venture Capital Club, Helvetian Investment Club</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>UC Berkeley</h3>
+        <p class="meta">Economics, exchange semester · Jan to May 2027</p>
+        <ul><li>Exchange semester in the United States</li></ul>
+      </div>
+      <div class="card reveal">
+        <h3>Ecole Moser Genève</h3>
+        <p class="meta">Bilingual Matura (French &amp; German), graduated with honours · 2021 to 2024</p>
+        <ul>
+          <li>Focus: Physics, Advanced Mathematics, Coding</li>
+          <li>Matura paper on AI as a tool of population control in modern China, nominated by Human Rights Watch</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3>Summer programmes</h3>
+        <p class="meta">Oxford Scholastica Academy · Aiglon College</p>
+        <ul>
+          <li>Oxford: Law, research thesis on admiralty law (2022)</li>
+          <li>Oxford: Business &amp; Enterprise, research project on renewable ship propulsion (2019)</li>
+          <li>Aiglon College: Mathematics &amp; Sciences Summer Academy (2018)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="certs">
+      <div class="cert reveal"><div class="w">Alternative Investments</div><div class="o">Harvard Business School Online · 2026</div></div>
+      <div class="cert reveal"><div class="w">Associate Data Scientist in Python, Python &amp; SQL Fundamentals</div><div class="o">DataCamp · 2026</div></div>
+      <div class="cert reveal"><div class="w">Bloomberg Market Concepts &amp; Finance Fundamentals</div><div class="o">Bloomberg · 2025</div></div>
+      <div class="cert reveal"><div class="w">Excel Skills for Business</div><div class="o">Macquarie University · 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <p class="kicker reveal">07 · Toolkit</p>
+    <h2 class="reveal">Skills</h2>
+    <div class="grid2">
+      <div class="reveal">
+        <p class="subhead">Modelling &amp; valuation</p>
+        <div class="chips" style="margin-bottom:28px">
+          <span class="chip">DCF</span><span class="chip">Trading comps</span><span class="chip">LBO</span><span class="chip">DDM</span><span class="chip">Reverse DCF</span><span class="chip">Real estate modelling</span><span class="chip">IRR / NPV</span><span class="chip">Monte Carlo sensitivity</span><span class="chip">Fund due diligence</span>
+        </div>
+        <p class="subhead">Technical</p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">R</span><span class="chip">SQL</span><span class="chip">Excel (advanced)</span><span class="chip">Bloomberg Terminal</span><span class="chip">SPSS</span><span class="chip">HubSpot</span><span class="chip">LLM workflows &amp; automation</span><span class="chip">PowerPoint</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="subhead">Languages</p>
+        <div class="lang"><span>French</span><span>Native</span></div>
+        <div class="lang"><span>English</span><span>C1</span></div>
+        <div class="lang"><span>German</span><span>B2</span></div>
+        <div class="lang"><span>Swiss German</span><span>B2</span></div>
+        <p class="subhead" style="margin-top:28px">Beyond the CV</p>
+        <p style="font-size:15px;color:var(--muted)">Personal investor in equities and alternatives. Investment workshops with JPMorgan Chase, Citi and LGT Capital Partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <h2 class="reveal">Let's talk.</h2>
+    <p class="reveal">Open to summer 2027 internship opportunities. The fastest way to reach me is by email.</p>
+    <div class="btns reveal">
+      <a class="btn primary" href="mailto:arthur.glauser27@gmail.com">arthur.glauser27@gmail.com</a>
+      <a class="btn ghost" href="cv.pdf" download>Download CV</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/REPLACE-ME" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/atglauser" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="foot">© <span id="yr"></span> Arthur Glauser</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // Image fallbacks: keep the styled placeholder if a photo is missing
+  document.querySelectorAll('img[data-fallback]').forEach(function(img){
+    var box = img.parentElement;
+    function ok(){ box.classList.add('hasimg'); }
+    function bad(){ img.remove(); }
+    if (img.complete) { img.naturalWidth ? ok() : bad(); }
+    img.addEventListener('load', ok); img.addEventListener('error', bad);
+  });
+  document.querySelectorAll('img[data-hide]').forEach(function(img){
+    function bad(){ img.parentElement.classList.add('missing'); }
+    if (img.complete && !img.naturalWidth) bad();
+    img.addEventListener('error', bad);
+  });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Count-up numbers
+  function countUp(el){
+    var target = +el.dataset.count;
+    if (reduce) { el.textContent = target; return; }
+    var t0 = null, dur = 1200;
+    function step(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * e).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in');
+        en.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(en.target);
+      });
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal, .stats').forEach(function(el){ io.observe(el); });
+
+    // Active nav link
+    var links = {};
+    document.querySelectorAll('.nav a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting && links[en.target.id]) {
+          Object.values(links).forEach(function(a){ a.classList.remove('active'); });
+          links[en.target.id].classList.add('active');
+          var a = links[en.target.id], nav = a.parentElement;
+          nav.scrollTo({left: a.offsetLeft - nav.clientWidth/2 + a.clientWidth/2, behavior: reduce ? 'auto' : 'smooth'});
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){ navObs.observe(s); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('[data-count]').forEach(function(el){ el.textContent = el.dataset.count; });
+  }
+
+  // Scroll progress
+  var bar = document.getElementById('progress');
+  function onScroll(){
+    var h = document.documentElement;
+    var p = h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight);
+    bar.style.width = (p * 100) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>
