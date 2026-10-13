@@ -37,12 +37,14 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Restrained interactivity: scroll reveal, count-up numbers, active nav, progress bar. No skill bars, no typing effects.
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 
-## Image filenames
-`images/portrait.jpg`, `dcm.jpg`, `syz.jpg` (wide 21:9 banner), `gcp.jpg`, `beric.jpg`, `sailing-1.jpg` (full-width cover), `sailing-2.jpg`, `sailing-3.jpg`. Missing images fall back to styled placeholders.
+## Images
+- Company logos (from official sites; Syz from blog.syzgroup.com): `images/dcm-logo.svg` (recoloured to light greys for the dark section), `syz-logo.png` (140px native, keep small), `beric-logo.png`. Shown on `.media.logo` plates.
+- Still missing, fall back to styled placeholders: `portrait.jpg`, `gcp.jpg` (no GCP logo yet), `sailing-1.jpg` (full-width cover), `sailing-2.jpg`, `sailing-3.jpg`.
 
 ## Open items
-- Add photos (Arthur will supply); update the generic gallery alt text then.
-- Confirm DataCamp "Associate Data Scientist in Python" and add certification IDs (comes with the photos).
+- Portrait, GCP visual and sailing photos; update the generic gallery alt text then.
+- Certification credential IDs/links (LinkedIn blocks automated access; Arthur to paste them).
+- DataCamp: only Python Data Fundamentals and SQL Fundamentals are completed (Associate Data Scientist was never done; don't list it).
 
 ## Collaboration style
 Arthur prefers concise, direct answers (bullet points where they fit), targeted edits over broad rewrites, and wants strategic concerns flagged before execution.

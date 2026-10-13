@@ -105,6 +105,9 @@ p,li{text-wrap:pretty}
 .media img{width:100%;height:100%;object-fit:cover}
 .media .mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:clamp(48px,8vw,104px);letter-spacing:-.04em;color:var(--ph-fg,var(--line))}
 .media.hasimg .mono{display:none}
+.media.logo{background:var(--card);border:1px solid var(--line)}
+.media.logo img{object-fit:contain;padding:18%}
+.split>.media.logo{aspect-ratio:1/1}
 .split{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
 .split>.media{position:sticky;top:120px;aspect-ratio:4/5}
 .split.flip>.media{order:2}
@@ -134,8 +137,8 @@ p,li{text-wrap:pretty}
 .theme-syz{--bg:#0f1b2d;--fg:#f1ece2;--muted:#aca592;--accent:#c9a45c;--card:#14243a;--line:#2a3b55;--r:2px;--display:var(--serif);--ph:linear-gradient(160deg,#1a2c47,#0f1b2d);--ph-fg:rgba(201,164,92,.3)}
 .theme-syz h2{font-weight:500;letter-spacing:-.025em;font-size:clamp(44px,6.4vw,80px)}
 .theme-syz .lede{font-family:var(--serif);font-size:clamp(19px,2vw,24px);line-height:1.45}
-.syz-head{max-width:780px}
-.banner{aspect-ratio:21/9;margin-bottom:56px}
+.syz-head{display:grid;grid-template-columns:minmax(0,780px) auto;justify-content:space-between;align-items:start;gap:48px;margin-bottom:16px}
+.syz-logo{width:140px;height:auto;margin-top:8px}
 .papers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:56px}
 .paper{display:flex;flex-direction:column;gap:10px;text-decoration:none;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:border-color .3s var(--ease),transform .3s var(--ease)}
 .paper:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -244,7 +247,10 @@ p,li{text-wrap:pretty}
   .split>.media{position:relative;top:0;aspect-ratio:16/10}
   .split.flip>.media{order:0}
   .beric-grid,.sail-grid{gap:40px}
-  .banner{aspect-ratio:16/10;margin-bottom:40px}
+  .syz-head{grid-template-columns:1fr;gap:0}
+  .syz-logo{order:-1;width:112px;margin:0 0 28px}
+  .split>.media.logo{aspect-ratio:16/10}
+  .media.logo img{padding:12% 22%}
   .stats-inner{grid-template-columns:1fr 1fr}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -336,8 +342,8 @@ p,li{text-wrap:pretty}
 <!-- DCM -->
 <section class="chapter theme-dcm" id="dcm">
   <div class="wrap split">
-    <div class="media reveal">
-      <img src="images/dcm.jpg" alt="DCM Systematic, Geneva" data-fallback>
+    <div class="media logo reveal">
+      <img src="images/dcm-logo.svg" alt="DCM Systematic logo" data-fallback>
       <div class="mono" aria-hidden="true">DCM</div>
     </div>
     <div>
@@ -376,14 +382,12 @@ p,li{text-wrap:pretty}
 <section class="chapter theme-syz" id="syz">
   <div class="wrap">
     <div class="syz-head">
-      <h2 class="reveal">SYZ Bank</h2>
-      <p class="meta reveal"><b>Summer Intern, CIO's Office and Research Department</b>Geneva, Sep 2025</p>
-      <p class="lede reveal">Working alongside the CIO and Chief Economist on macro research, fund selection and the analysis behind portfolio allocation.</p>
-    </div>
-
-    <div class="media banner reveal">
-      <img src="images/syz.jpg" alt="SYZ Bank, Geneva" data-fallback>
-      <div class="mono" aria-hidden="true">SYZ</div>
+      <div>
+        <h2 class="reveal">SYZ Bank</h2>
+        <p class="meta reveal"><b>Summer Intern, CIO's Office and Research Department</b>Geneva, Sep 2025</p>
+        <p class="lede reveal">Working alongside the CIO and Chief Economist on macro research, fund selection and the analysis behind portfolio allocation.</p>
+      </div>
+      <img class="syz-logo reveal" src="images/syz-logo.png" alt="Syz Private Banking logo" width="140" height="98">
     </div>
 
     <div class="papers reveal">
@@ -456,8 +460,8 @@ p,li{text-wrap:pretty}
     <div class="beric-fig reveal">
       <div class="big">CHF <span data-count="45">45</span>M+</div>
       <div class="lbl">Construction projects supported</div>
-      <div class="media">
-        <img src="images/beric.jpg" alt="Construction project, Geneva" data-fallback>
+      <div class="media logo">
+        <img src="images/beric-logo.png" alt="Beric logo" data-fallback>
         <div class="mono" aria-hidden="true">BM</div>
       </div>
     </div>
@@ -548,7 +552,7 @@ p,li{text-wrap:pretty}
       <h3>Certifications</h3>
       <ul class="cert-list">
         <li><div class="w">Alternative Investments</div><div class="o">Harvard Business School Online, 2026</div></li>
-        <li><div class="w">Associate Data Scientist in Python, Python &amp; SQL Fundamentals</div><div class="o">DataCamp, 2026</div></li>
+        <li><div class="w">Python Data Fundamentals, SQL Fundamentals</div><div class="o">DataCamp, 2026</div></li>
         <li><div class="w">Bloomberg Market Concepts &amp; Finance Fundamentals</div><div class="o">Bloomberg, 2025</div></li>
         <li><div class="w">Excel Skills for Business</div><div class="o">Macquarie University, 2025</div></li>
       </ul>
