@@ -161,6 +161,9 @@ p,li{text-wrap:pretty}
 .stack .debt{flex:0 0 70%;background:#c4d3c9;color:var(--fg);display:flex;align-items:center;padding-left:12px}
 .stack .eq{flex:1;background:var(--accent);color:#f7f8f5;display:flex;align-items:center;padding-left:12px}
 .flow{margin-top:12px;font-size:13px;color:var(--muted)}
+.module{display:flex;align-items:flex-end;gap:16px;margin-bottom:40px}
+.module img{width:120px;height:auto;border:1px solid var(--line)}
+.module figcaption{font-size:13px;color:var(--muted)}
 
 /* Beric: terracotta and slate. Figure-led column */
 .theme-beric{--bg:#e6e4e1;--fg:#1f2326;--muted:#596066;--accent:#a4532a;--card:#f1efec;--line:#cfcbc5;--r:4px;--ph:linear-gradient(160deg,#cdbcad,#a4532a);--ph-fg:rgba(255,255,255,.55)}
@@ -447,6 +450,11 @@ p,li{text-wrap:pretty}
         <div class="bar"><div class="debt">70% loan-to-cost</div><div class="eq">Equity</div></div>
         <p class="flow">Land &rarr; Construction budget &rarr; Financing &rarr; 5-year cash flows &rarr; Exit vs hold</p>
       </div>
+
+      <figure class="module reveal">
+        <img src="images/gcp-module.png" alt="Indicative floor plan of a standard housing unit module" width="557" height="828" loading="lazy">
+        <figcaption>Unit module, indicative plan</figcaption>
+      </figure>
 
       <ul class="bullets reveal">
         <li><b>Founded the platform and secured CHF 800k+</b> in soft equity commitments from private investors ahead of commercial registration (Q1 2027).</li>

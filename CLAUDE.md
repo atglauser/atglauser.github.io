@@ -42,8 +42,10 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Photos (supplied by Arthur, resized to ≤2000px, JPEG q80): `portrait.jpg`, `gcp.jpg` (project rendering, label it as a rendering), `sailing-1.jpg` (cover), `sailing-2..7.jpg` (gallery: 3 wide + 3 tall, grid areas a-f). Torveo watermarks are the photographer's; leave them.
 - Missing images fall back to styled placeholders.
 
-## Open items
-- Certification credential IDs/links (LinkedIn blocks automated access; Arthur to paste them).
+- `gcp-module.png`: unit floor plan from the Alpods brochure. Only the building rendering and this plan may be used from Alpods material: never prices, address, plot number or unit grid.
+
+## Notes
+- No certification credential IDs on the site (Arthur's decision).
 - DataCamp: only Python Data Fundamentals and SQL Fundamentals are completed (Associate Data Scientist was never done; don't list it).
 
 ## Collaboration style
