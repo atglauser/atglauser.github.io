@@ -186,10 +186,11 @@ h1,h2,h3{text-wrap:balance}
 .theme-gcp .back,.theme-gcp .subhead{text-transform:uppercase;letter-spacing:.1em;font-size:12px;font-weight:700;color:var(--fg)}
 .theme-gcp .lede{font-weight:500}
 .theme-gcp .media{clip-path:var(--cut)}
-.theme-gcp .media img,.gcp-band .media img{filter:grayscale(1) contrast(1.12)}
 .theme-gcp .bullets li::before{top:.55em;width:9px;height:9px;background:var(--fg);transform:skewX(-20deg)}
 .theme-gcp .tag{border:1.5px solid var(--fg);color:var(--fg);text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:700}
-.gcp-mark{display:block;width:72px;height:auto;margin-bottom:24px}
+/* Black plate behind the logo so the overflowing letters sit on black, not on the light page */
+.gcp-mark{display:block;width:104px;height:auto;padding:14px 12px;background:#202020;margin-bottom:28px;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
 .figure{border-top:8px solid var(--fg);padding-top:18px;margin-bottom:24px}
 .figure .big{font-size:clamp(60px,9.5vw,120px);font-weight:800;letter-spacing:-.055em;line-height:.88;color:var(--accent);font-variant-numeric:tabular-nums}
 .figure .lbl{font-size:13px;color:var(--muted);margin-top:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
@@ -214,7 +215,6 @@ h1,h2,h3{text-wrap:balance}
 .gcp-visuals .plan{background:#ffffff;clip-path:polygon(48px 0,100% 0,100% 100%,0 100%,0 48px)}
 .gcp-visuals .plan img{object-fit:contain;padding:16px}
 .xp-card.theme-gcp h3{text-transform:uppercase;font-weight:800;letter-spacing:-.035em}
-.xp-card.theme-gcp .xp-media img{filter:grayscale(1) contrast(1.12)}
 .xp-card.theme-gcp{border:2px solid #0d0d0d}
 
 /* Beric: terracotta and slate. Figure-led column, project renderings */
