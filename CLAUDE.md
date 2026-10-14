@@ -39,7 +39,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Experience copy is short prose with bold lead-ins; only restate facts Arthur supplied, never invent outcomes.
 - GCP page = role (split, KPIs, capital stack, "My role" bullets) + concept blocks (problem, approach, working locally, structure) + ambition line. Keep the two halves non-overlapping.
 - **Performance:** no `backdrop-filter` (caused scroll lag), no `text-wrap: pretty` on body text, reveal is fade-only, count-up blocks use `contain: layout`, no animated box-shadows, gallery photos ≤800px wide. Cards use `thumb-*.jpg` (900px); every `<img>` has `decoding="async"`, below-the-fold ones `loading="lazy"` with width/height.
-- Restrained interactivity: scroll reveal, count-up numbers, active nav, progress bar, card hover. No skill bars, no typing effects.
+- Restrained interactivity: scroll reveal, count-up numbers, active nav, progress bar, card hover. No skill bars, no skill tags, no typing effects.
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 
 ## Images
