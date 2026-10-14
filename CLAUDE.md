@@ -4,7 +4,7 @@ Personal, recruiter-oriented CV website for Arthur Glauser, hosted on GitHub Pag
 
 ## Stack
 - Static multi-page site, no build step, no framework: `index.html` + one page per experience (`dcm.html`, `gcp.html`, `syz.html`, `beric.html`, `sailing.html`).
-- Shared `styles.css` and `site.js` (fallbacks, reveal, count-up, nav state). Header, pager and footer markup is repeated in each page; keep them in sync when editing.
+- Shared `styles.css` and `site.js` (fallbacks, reveal, count-up, nav state). Linked with a `?v=YYYYMMDD` version: bump it in all pages whenever CSS, JS or a reused image changes, or browsers show cached old versions. Header, pager and footer markup is repeated in each page; keep them in sync when editing.
 - Fonts from Google Fonts: Geist (base sans), Newsreader (SYZ and Education headings), JetBrains Mono (DCM, metadata).
 - Photos in `images/`.
 
