@@ -32,7 +32,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - **Conservative figures.** GCP: CHF 800k+ *soft commitments*, registration Q1 2027 (not "raised CHF 1M"). Matura 2021 to 2024.
 - **No private data on the public site:** no home address, phone number or date of birth.
 - **No CV download.** The site is the CV; Arthur tailors PDF versions per application. Don't add `cv.pdf` or download buttons.
-- **Exchange school not confirmed.** Never write its name in the HTML; the Education card shows `images/exchange-blur.png`, a pre-blurred render of the name (unreadable, no text in source). Contact text says "exchange semester in the US" (country only).
+- **Exchange: UC Berkeley, Jan to May 2027** (now shown unblurred, with the Cal logo). Contact text says "exchange semester in the US".
 - **4 languages** stat stays (Swiss German counted separately).
 - SYZ papers: one co-authored with the Chief Economist (Swiss-US tariffs), one with the CIO (SCO). Not "both with CIO and Chief Economist".
 - Distinctions (from Arthur's LinkedIn): SNG Special Distinction 2025 (Translémanique en Solitaire performance), SNG Sports Merit Awards 2025, 2023, 2022, Human Rights Watch nomination 2024 (Matura paper). No J/70 league bronze results.
@@ -43,6 +43,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 
 ## Images
+- Education logos (supplied by Arthur, 128px PNG, shown at 40px next to the card title): `edu-hsg.png` (white made transparent), `edu-berkeley.png`.
 - Certification logos (supplied by Arthur, 128px PNG): `cert-hbs.png`, `cert-datacamp.png`, `cert-bloomberg.png`, `cert-macquarie.png`, shown at 44px in the certification list.
 - Company logos (from official sites; Syz from blog.syzgroup.com): `dcm-logo.svg` (recoloured light for the dark theme), `syz-logo.png` (140px native, keep small), `beric-logo.png`. GCP logo is an inline SVG (dark square, cream "GCP").
 - Photos supplied by Arthur, resized (≤2000px, JPEG q80): `portrait.jpg`; `gcp.jpg`, `gcp-night.jpg` (renderings, label as such), `gcp-plan.jpg` (unit plan); `beric-1..4.jpg` (Beric project renderings, captioned "Projects by Beric", don't claim Arthur worked on them); `sailing-1.jpg` (cover), `sailing-2..14.jpg` (gallery). Torveo watermarks are the photographer's; leave them.

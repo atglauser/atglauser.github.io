@@ -312,8 +312,8 @@ h1,h2,h3{text-wrap:balance}
 .js .reveal.in{opacity:1}
 /* Count-up numbers rewrite text every frame; keep that re-layout local */
 .stat,.kpi,.figure,.beric-fig .big,.xp-fig{contain:layout}
-/* Unconfirmed exchange school: pre-blurred image, so the name is not in the page source */
-.exchange-blur{display:block;width:auto;height:48px;margin:-8px 0 -8px -4px;user-select:none;pointer-events:none}
+.edu-head{display:flex;align-items:center;gap:14px}
+.edu-logo{width:40px;height:40px;object-fit:contain;flex:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
