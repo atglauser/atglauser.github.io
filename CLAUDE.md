@@ -17,7 +17,7 @@ Personal, recruiter-oriented CV website for Arthur Glauser, hosted on GitHub Pag
 Each experience has its own visual language (deliberate, overrides the design skill's "one theme per page" rule):
 - Main page: minimal monochrome hero; Distinctions dark, year-led list; Education minimalist bento
 - DCM: dark tactical terminal, green accent, mono metadata, sharp corners, scanlines
-- SYZ: navy and gold, Newsreader serif, editorial stack with the two published papers as linked cards
+- SYZ: navy and gold, Newsreader serif, editorial stack with the two published papers as linked cards; papers + bullets sit on `syz-atrium.jpg` under a navy overlay (`.syz-art`), with the "Photo © Annick Wetter" credit kept
 - GCP: hard monochrome (black on bone, no colour accent), heavy uppercase, thick rules, cut corners (`--cut` clip-path), grayscale renderings baked into the files (`*-bw.jpg`, no CSS filters), original logo (dark square, cream letters) centred on a black rectangle exactly as wide as the title (`.gcp-title` wraps plate + h1; title lines fixed with `<br>`), one-line ambition, hatched capital stack, concept blocks in a slanted black band (`.gcp-band`)
 - Beric: terracotta and slate, figure-led column, project renderings grid
 - Sailing: photo cover, sea blue, results timeline, SNG distinctions, masonry gallery

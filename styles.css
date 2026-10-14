@@ -168,6 +168,13 @@ h1,h2,h3{text-wrap:balance}
 .theme-syz .lede{font-family:var(--serif);font-size:clamp(19px,2vw,24px);line-height:1.45}
 .syz-head{display:grid;grid-template-columns:minmax(0,780px) auto;justify-content:space-between;align-items:start;gap:48px;margin-bottom:16px}
 .syz-logo{width:140px;height:auto;margin-top:8px}
+.theme-syz.page-first{padding-bottom:80px}
+/* Papers and bullets sit on the atrium photo under a navy overlay; plain scrolling background (no fixed attachment, for performance) */
+.syz-art{position:relative;background:var(--bg);color:var(--fg);padding:96px 16px 120px;
+  background-image:linear-gradient(180deg,rgba(15,27,45,.9) 0%,rgba(15,27,45,.72) 45%,rgba(15,27,45,.9) 100%),url(images/syz-atrium.jpg);
+  background-size:cover;background-position:center}
+.syz-art .paper{background:rgba(20,36,58,.88)}
+.photo-credit{position:absolute;right:16px;bottom:12px;font-size:11px;color:rgba(241,236,226,.55);letter-spacing:.02em}
 .papers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:56px}
 .paper{display:flex;flex-direction:column;gap:10px;text-decoration:none;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:border-color .3s var(--ease),transform .3s var(--ease)}
 .paper:hover{border-color:var(--accent);transform:translateY(-2px)}
