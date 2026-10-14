@@ -278,6 +278,8 @@ h1,h2,h3{text-wrap:balance}
 .certs{margin-top:56px}
 .certs h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:20px}
 .cert-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:20px 56px}
+.cert-list li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:center}
+.cert-logo{width:44px;height:44px;object-fit:contain}
 .cert-list .w{font-weight:600;font-size:15px}
 .cert-list .o{font-size:13.5px;color:var(--muted)}
 

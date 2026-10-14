@@ -43,6 +43,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 - Must stay readable without JS, respect `prefers-reduced-motion`, work at 390px width with no horizontal scroll, and print cleanly.
 
 ## Images
+- Certification logos (supplied by Arthur, 128px PNG): `cert-hbs.png`, `cert-datacamp.png`, `cert-bloomberg.png`, `cert-macquarie.png`, shown at 44px in the certification list.
 - Company logos (from official sites; Syz from blog.syzgroup.com): `dcm-logo.svg` (recoloured light for the dark theme), `syz-logo.png` (140px native, keep small), `beric-logo.png`. GCP logo is an inline SVG (dark square, cream "GCP").
 - Photos supplied by Arthur, resized (≤2000px, JPEG q80): `portrait.jpg`; `gcp.jpg`, `gcp-night.jpg` (renderings, label as such), `gcp-plan.jpg` (unit plan); `beric-1..4.jpg` (Beric project renderings, captioned "Projects by Beric", don't claim Arthur worked on them); `sailing-1.jpg` (cover), `sailing-2..14.jpg` (gallery). Torveo watermarks are the photographer's; leave them.
 - Alpods material: only the renderings and the unit plan; never prices, address, plot number or unit grid.
