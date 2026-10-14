@@ -16,7 +16,7 @@ Personal, recruiter-oriented CV website for Arthur Glauser, hosted on GitHub Pag
 
 Each experience has its own visual language (deliberate, overrides the design skill's "one theme per page" rule):
 - Main page: minimal monochrome hero; Distinctions dark, year-led list; Education minimalist bento
-- DCM: dark tactical terminal, green accent, mono metadata, sharp corners, scanlines
+- DCM: DCM brand blues (navy #1e2749, #18407a, #497ebb; page bg #121a35, accent #6a9fe0), terminal feel kept (mono metadata, sharp corners, scanlines), original-colour logo on a white plate, `dcm-boat.jpg` (DCM-branded trimaran) as a 21:9 band at the end of the section
 - SYZ: navy and gold, Newsreader serif, editorial stack with the two published papers as linked cards; papers + bullets sit on `syz-atrium.jpg` under a navy overlay (`.syz-art`), with the "Photo © Annick Wetter" credit kept
 - GCP: hard monochrome (black on bone, no colour accent), heavy uppercase, thick rules, cut corners (`--cut` clip-path), grayscale renderings baked into the files (`*-bw.jpg`, no CSS filters), original logo (dark square, cream letters) centred on a black rectangle exactly as wide as the title (`.gcp-title` wraps plate + h1; title lines fixed with `<br>`), one-line ambition, hatched capital stack, concept blocks in a slanted black band (`.gcp-band`)
 - Beric: terracotta and slate, figure-led column, project renderings grid
@@ -45,7 +45,7 @@ Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no nu
 ## Images
 - Education logos (supplied by Arthur, 128px PNG, shown at 40px next to the card title): `edu-hsg.png` (white made transparent), `edu-berkeley.png`.
 - Certification logos (supplied by Arthur, 128px PNG): `cert-hbs.png`, `cert-datacamp.png`, `cert-bloomberg.png`, `cert-macquarie.png`, shown at 44px in the certification list.
-- Company logos (from official sites; Syz from blog.syzgroup.com): `dcm-logo.svg` (recoloured light for the dark theme), `syz-logo.png` (140px native, keep small), `beric-logo.png`. GCP logo is an inline SVG (dark square, cream "GCP").
+- Company logos (from official sites; Syz from blog.syzgroup.com): `dcm-logo.svg` (original brand colours, always on a white plate), `syz-logo.png` (140px native, keep small), `beric-logo.png`. GCP logo is an inline SVG (dark square, cream "GCP").
 - Photos supplied by Arthur, resized (≤2000px, JPEG q80): `portrait.jpg`; `gcp.jpg`, `gcp-night.jpg` (renderings, label as such), `gcp-plan.jpg` (unit plan); `beric-1..4.jpg` (Beric project renderings, captioned "Projects by Beric", don't claim Arthur worked on them); `sailing-1.jpg` (cover), `sailing-2..14.jpg` (gallery). Torveo watermarks are the photographer's; leave them.
 - Alpods material: only the renderings and the unit plan; never prices, address, plot number or unit grid.
 - Not used: the yellow Miata photo (not sailing, not Arthur).

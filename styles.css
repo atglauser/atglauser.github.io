@@ -145,7 +145,11 @@ h1,h2,h3{text-wrap:balance}
 .kpi .lbl{font-size:12.5px;color:var(--muted);line-height:1.4}
 
 /* DCM: tactical terminal. Sharp corners, mono metadata, scanlines */
-.theme-dcm{--bg:#0b0d0f;--fg:#e6e8ea;--muted:#8d96a0;--accent:#46d68c;--card:#111417;--line:#232a31;--r:0px;--ph:#111417;--ph-fg:#232a31}
+/* DCM brand palette: navy #1e2749, mid blue #18407a, light blue #497ebb (accent lifted for contrast on navy) */
+.theme-dcm{--bg:#121a35;--fg:#eef1f8;--muted:#9ba7c6;--accent:#6a9fe0;--card:#1a2449;--line:#2b3a6b;--r:0px;--ph:#1a2449;--ph-fg:#2b3a6b}
+.theme-dcm .media.logo,.xp-card.theme-dcm .xp-media.logo{background:#ffffff;border-color:#ffffff}
+.dcm-photo{aspect-ratio:21/9;margin-top:88px;border-left:4px solid #18407a}
+.dcm-photo img{object-position:center 40%}
 .theme-dcm::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(255,255,255,.02) 2px 4px);pointer-events:none}
 .theme-dcm h1,.theme-dcm h2{text-transform:uppercase;font-weight:800;letter-spacing:-.04em;line-height:.92}
 .theme-dcm .meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
@@ -354,6 +358,7 @@ h1,h2,h3{text-wrap:balance}
   .gcp-visuals .plan{aspect-ratio:4/5}
   .gcp-band{padding:calc(88px + 8vw) 16px 88px;clip-path:polygon(0 8vw,100% 0,100% 100%,0 100%);margin-top:-8vw}
   .gcp-band .concept{grid-template-columns:1fr;gap:40px}
+  .dcm-photo{aspect-ratio:16/10;margin-top:56px}
   .ambition{margin:64px 0 48px}
   .theme-gcp{--cut:polygon(0 0,100% 0,100% calc(100% - 32px),calc(100% - 32px) 100%,0 100%)}
   .proj-grid .media,.proj-grid .media:nth-child(2),.proj-grid .media:nth-child(3){aspect-ratio:3/2;grid-column:auto;grid-row:auto}
