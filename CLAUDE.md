@@ -15,7 +15,7 @@ Personal, recruiter-oriented CV website for Arthur Glauser, hosted on GitHub Pag
 - Each experience page title is an `h1`.
 
 Each experience has its own visual language (deliberate, overrides the design skill's "one theme per page" rule):
-- Main page: minimal monochrome hero; Distinctions dark, year-led list; Education minimalist bento
+- Main page: finance/technical minimalism. Restrained hero name with a hairline rule, 2px corners on portrait and buttons; highlights strip with mono uppercase labels above tabular figures; section headers are ledger-style `.sec-head` (title + hairline + mono date range), no giant titles; square experience cards; Distinctions dark, year-led list; Education a neutral 1px-ruled grid (no pastel tints)
 - DCM: DCM brand blues (navy #1e2749, #18407a, #497ebb; page bg #121a35, accent #6a9fe0), terminal feel kept (mono metadata, sharp corners, scanlines), original-colour logo on a white plate, `dcm-boat.jpg` (DCM-branded trimaran) as a 21:9 band at the end of the section
 - SYZ: navy and gold, Newsreader serif, editorial stack with the two published papers as linked cards; papers + bullets sit on `syz-atrium.jpg` under a navy overlay (`.syz-art`), with the "Photo © Annick Wetter" credit kept
 - GCP: hard monochrome (black on bone, no colour accent), heavy uppercase, thick rules, cut corners (`--cut` clip-path), grayscale renderings baked into the files (`*-bw.jpg`, no CSS filters), original logo (dark square, cream letters) centred on a black rectangle exactly as wide as the title (`.gcp-title` wraps plate + h1; title lines fixed with `<br>`), one-line ambition, hatched capital stack, concept blocks in a slanted black band (`.gcp-band`)
