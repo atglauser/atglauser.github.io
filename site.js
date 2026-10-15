@@ -27,10 +27,12 @@
   topbar.addEventListener('mouseleave', function(){ topbar.classList.remove('peek'); });
   topbar.addEventListener('focusout', function(e){ if (!topbar.contains(e.relatedTarget)) topbar.classList.remove('peek'); });
 
-  // Count-up numbers (markup holds the final value, so no-JS still reads correctly)
+  // Count-up numbers: the final value stays in the markup until the number is actually on screen,
+  // so screenshots, link previews and no-JS visitors always read the real figure
   function countUp(el){
     var target = +el.dataset.count;
     if (reduce) return;
+    el.textContent = '0';
     var t0 = null, dur = 1200;
     function step(t){
       if (!t0) t0 = t;
@@ -45,10 +47,6 @@
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
     return;
   }
-  if (!reduce) {
-    document.querySelectorAll('[data-count]').forEach(function(el){ el.textContent = '0'; });
-  }
-
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
       if (!en.isIntersecting) return;

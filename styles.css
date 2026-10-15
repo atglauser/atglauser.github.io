@@ -16,8 +16,6 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px
 a{color:inherit}
 img{max-width:100%;display:block}
 h1,h2,h3{text-wrap:balance}
-/* Justified body copy; hyphenation keeps word gaps even, especially in narrow columns */
-.lede,.bullets li,.c-block p,.xp-sum,.contact p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 .skip{position:absolute;left:16px;top:-60px;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:11;text-decoration:none}
 .skip:focus{top:12px}
@@ -95,16 +93,17 @@ h1,h2,h3{text-wrap:balance}
 .xp-card:hover .xp-media.logo img{transform:none}
 .xp-body{display:flex;flex-direction:column;gap:8px;padding:24px 24px 22px;flex:1;position:relative}
 .xp-role{font-size:13px;color:var(--muted)}
-.xp-card h3{font-family:var(--display);font-size:clamp(24px,2.6vw,32px);line-height:1.05;letter-spacing:-.03em;font-weight:700}
+/* Card titles share one style on the home grid; theming stays on the inner pages */
+.xp-card h3{font-family:var(--sans);font-size:clamp(24px,2.6vw,32px);line-height:1.05;letter-spacing:-.03em;font-weight:700}
 .xp-sum{font-size:15px;max-width:52ch}
 .xp-fig{margin-top:auto;padding-top:14px;font-size:13.5px;color:var(--muted)}
 .xp-fig b{display:block;font-size:22px;letter-spacing:-.02em;color:var(--accent);font-variant-numeric:tabular-nums}
 .xp-go{font-size:13.5px;font-weight:600;margin-top:10px}
 .xp-go::after{content:" \2192";display:inline-block;transition:transform .3s var(--ease)}
 .xp-card:hover .xp-go::after{transform:translateX(4px)}
-.xp-card.theme-dcm h3{text-transform:uppercase;font-weight:800}
+
 .xp-card.theme-dcm .xp-role,.xp-card.theme-dcm .xp-fig b{font-family:var(--mono)}
-.xp-card.theme-syz h3{font-weight:500;letter-spacing:-.02em}
+
 
 /* Distinctions (main page): dark, year-led list */
 .theme-dist{--bg:#16181c;--fg:#f0efe9;--muted:#a3a7ae;--accent:#9dbcf5;--line:#2a2e35;--r:0px}
@@ -230,7 +229,7 @@ h1,h2,h3{text-wrap:balance}
 .gcp-visuals .media{clip-path:polygon(0 0,100% 0,100% calc(100% - 48px),calc(100% - 48px) 100%,0 100%);background:#1b1b1b}
 .gcp-visuals .plan{background:#ffffff;clip-path:polygon(48px 0,100% 0,100% 100%,0 100%,0 48px)}
 .gcp-visuals .plan img{object-fit:contain;padding:16px}
-.xp-card.theme-gcp h3{text-transform:uppercase;font-weight:800;letter-spacing:-.035em}
+
 .xp-card.theme-gcp{border:2px solid #0d0d0d}
 
 /* Beric: terracotta and slate. Figure-led column, project renderings */
@@ -338,7 +337,7 @@ h1,h2,h3{text-wrap:balance}
 @media (max-width:860px){
   .hero-inner,.split,.beric-grid,.sail-grid,.papers,.cols2,.cert-list,.concept,.gcp-visuals,.proj-grid{grid-template-columns:1fr}
   .hero-inner{gap:36px}
-  .portrait{max-width:320px;aspect-ratio:1/1}
+  .portrait{max-width:200px;aspect-ratio:1/1;order:-1}
   .chapter,.xp{padding:88px 16px}
   .chapter.page-first{padding-top:136px}
   .theme-sail{padding:0}
