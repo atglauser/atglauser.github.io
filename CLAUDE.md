@@ -25,7 +25,7 @@ Tokens live on `.theme-*`: `--bg --fg --muted --accent --card --line --r` (corne
 
 ## Design skills
 `.claude/skills/` (local only, git-excluded) holds design-taste-frontend, redesign-existing-projects, minimalist-ui, industrial-brutalist-ui, high-end-visual-design. Apply them, but this file wins on conflicts: vanilla stack (no React/Tailwind), restrained motion, Google Fonts link, per-experience themes, no picsum placeholders (real photos only).
-Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no numbered section eyebrows, no scroll cues, hero subtext ≤ 20 words, no `window` scroll listeners (progress bar uses CSS `animation-timeline`).
+Rules worth keeping from them: no em/en dashes, max 1 middle dot per line, no numbered section eyebrows, no scroll cues, hero intro is Arthur's own first-person paragraph (longer than the skill's 20-word limit, by his choice), no `window` scroll listeners (progress bar uses CSS `animation-timeline`).
 
 ## Decisions to keep
 - **Honesty over hype.** DCM work was fund reporting automation, CRM/BD data and dashboards, not trading. Never describe it as trading or signal research.
