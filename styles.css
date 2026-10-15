@@ -2,7 +2,7 @@
    visual language. Native CSS + vanilla JS. Dials: variance 6, motion 4, density 4.
    Each themed block sets its own tokens: --bg --fg --muted --accent --card --line --r (radius) --display. */
 :root{
-  --bg:#f5f5f3; --fg:#141516; --muted:#5c6066; --accent:#141516; --card:#ffffff; --line:#e2e2de; --r:8px;
+  --bg:#f5f5f3; --fg:#0f1012; --muted:#43474d; --accent:#0f1012; --card:#ffffff; --line:#cfcfca; --r:8px;
   --sans:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
   --serif:'Newsreader',Georgia,'Times New Roman',serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -317,7 +317,7 @@ h1,h2,h3{text-wrap:balance}
 .contact.compact .mail{font-size:clamp(20px,3vw,30px);margin-bottom:28px}
 .mail:hover{border-color:#f2f2f0}
 .contact .btn{border-color:#55595f;color:#f2f2f0}
-.foot{margin-top:96px;font-size:12px;color:#7a7f87;font-family:var(--mono)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:96px;padding-top:20px;border-top:1px solid #34373c;font-size:13px;color:#a7abb2}
 .contact.compact .foot{margin-top:56px}
 
 /* Reveal */
